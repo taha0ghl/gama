@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{037A32AC-4B6E-453E-B109-D2F00D847452}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GAMA</RootNamespace>
+    <AssemblyName>GAMA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AutoDesigner.cs" />
+    <Compile Include="Controls\Base\BaseBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\ComboSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\PnlAutoDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\PnlSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\LblSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\PctrBSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\TxtSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\MenuStripSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="کارآموز\frmAddEditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کارآموز\frmAddEditStudent.Designer.cs">
+      <DependentUpon>frmAddEditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ثبت نام\frmSabtNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ثبت نام\frmSabtNam.Designer.cs">
+      <DependentUpon>frmSabtNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IBtnPro.cs" />
+    <Compile Include="Interfaces\IAutoDesigner.cs" />
+    <Compile Include="Interfaces\IGAMAControl.cs" />
+    <Compile Include="Interfaces\IOrderable.cs" />
+    <Compile Include="Classes\Theme.cs" />
+    <Compile Include="Controls\Clock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Enums\Rank.cs" />
+    <Compile Include="Controls\Concreat\BtnClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\BtnOption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Concreat\BtnSubOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\FarsiMessageBox.cs" />
+    <Compile Include="Classes\FormDictionary.cs" />
+    <Compile Include="Enums\Gender.cs" />
+    <Compile Include="Classes\SqlCaptureManager.cs" />
+    <Compile Include="Classes\DateTimeManager.cs" />
+    <Compile Include="Classes\ControlManager.cs" />
+    <Compile Include="Controls\Base\BaseMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\OpenFileDialogManager.cs" />
+    <Compile Include="ثبت نام\frmAddEditSabtNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ثبت نام\frmAddEditSabtNam.Designer.cs">
+      <DependentUpon>frmAddEditSabtNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کارآموز\frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کارآموز\frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Base\BasePctrB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\BasePnl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmAddEditBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmAddEditBranch.Designer.cs">
+      <DependentUpon>frmAddEditBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Base\BaseLbl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\BaseTxt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Manager.cs" />
+    <Compile Include="Enums\Marriage.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Classes\DataGridViewManager.cs" />
+    <Compile Include="Enums\Moods.cs" />
+    <Compile Include="کتاب استاندارد\frmAddEditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmAddEditCourse.Designer.cs">
+      <DependentUpon>frmAddEditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmAddEditGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmAddEditGroup.Designer.cs">
+      <DependentUpon>frmAddEditGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmDetails.Designer.cs">
+      <DependentUpon>frmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmStandard.Designer.cs">
+      <DependentUpon>frmStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmBranch.Designer.cs">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmGroup.Designer.cs">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Base\frmMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\frmMaster.Designer.cs">
+      <DependentUpon>frmMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmMostanadat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmMostanadat.Designer.cs">
+      <DependentUpon>frmMostanadat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmShowAcademy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="کتاب استاندارد\frmShowAcademy.Designer.cs">
+      <DependentUpon>frmShowAcademy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Locations.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Classes\ProjectClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\SqlServerClass.cs" />
+    <Compile Include="Classes\StaticData.cs" />
+    <Compile Include="Controls\Concreat\BtnSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\BaseCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\TableNames.cs" />
+    <EmbeddedResource Include="Controls\Base\frmMaster.resx">
+      <DependentUpon>frmMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ثبت نام\frmAddEditSabtNam.resx">
+      <DependentUpon>frmAddEditSabtNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کارآموز\frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmAddEditBranch.resx">
+      <DependentUpon>frmAddEditBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="کتاب استاندارد\frmAddEditCourse.resx">
+      <DependentUpon>frmAddEditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmAddEditGroup.resx">
+      <DependentUpon>frmAddEditGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmBranch.resx">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmDetails.resx">
+      <DependentUpon>frmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmGroup.resx">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmMostanadat.resx">
+      <DependentUpon>frmMostanadat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmShowAcademy.resx">
+      <DependentUpon>frmShowAcademy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="کتاب استاندارد\frmStandard.resx">
+      <DependentUpon>frmStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
