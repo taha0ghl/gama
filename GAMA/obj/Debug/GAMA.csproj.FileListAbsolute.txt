@@ -57,3 +57,30 @@ C:\Users\PC1\Desktop\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditCourse.resources
 D:\GAMA\GAMA\obj\Debug\GAMA.FrmStudent.resources
 D:\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditSabtNam.resources
 D:\GAMA\GAMA\obj\Debug\GAMA.csproj.AssemblyReference.cache
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\GAMA.exe
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\GAMA.pdb
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.AssemblyReference.cache
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmMaster.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditSabtNam.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmStudent.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditBranch.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmMain.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.Properties.Resources.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditCourse.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditGroup.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmBranch.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.frmDetails.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmGroup.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmMostanadat.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmShowAcademy.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmStandard.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.GenerateResource.cache
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.CoreCompileInputs.cache
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.CopyComplete
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.exe
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.pdb
