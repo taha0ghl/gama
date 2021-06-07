@@ -79,7 +79,8 @@ namespace MyClass
                     Locations.AlignRights(constCtrl, ctrl);
 
                     // Y
-                    ctrl.Top = (lbl.RowIndex - 1) * YbetweenPareSpace + (lbl.RowIndex - 1) * constCtrl.Height;
+
+                    ctrl.Top = (lbl.RowIndex - 1) * (YbetweenPareSpace + constCtrl.Height);
                     Locations.AlignMiddles(ctrl, lbl);
                 }
             }

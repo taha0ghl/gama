@@ -39,15 +39,15 @@ namespace MyClass
         {
             string output = string.Empty;
 
-            output = SqlServerClass.Select(TableNames.BaseInformation, "DepartmentName", "Id = 1");
+            output = SqlServerClass.Select(TableNames.Base, "AcademyName", "Id = 1");
 
             return output;
         }
-        public static ArrayList RequirdDocumants()
+        public static string RequirdDocumants()
         {
-            ArrayList output;
+            string output;
 
-            output = SqlServerClass.GetAllField_ArrayList(TableNames.RequiredDocuments, "DocumentTitle");
+            output = SqlServerClass.Select(TableNames.Base, "DataPayeSabtNam");
 
             return output;
         }

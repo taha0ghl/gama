@@ -31,6 +31,21 @@ namespace GAMA
         //Events*******************************
         #region 
 
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            return;
+
+            string[] fields1 = { "sabtnamdate", "studentId", "idDore", "nahve", "typeClass", "freeTime", "Cost", "sabtnamUser", "description", "insertDate", "insertTime", "UserId" };
+            string[] values1 = { txtSabtnamDate.Text, ,, txtNahveMoarefi.Text, txtNoeClass.Text, txtVaghtAzad.Text, txtShahrie.Text, txtSabtnamUser.Text, txtDescription.Text, StaticData.current_date,, StaticData.current_user.Id };
+            //bool insert1 = SqlServerClass.InsertWithFields();
+
+            string[] fields2 = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "insertDate", "insertTime", "UserId" };
+
+            if (true)
+            {
+
+            }
+        }
         private void BtnEmza_Click(object sender, EventArgs e)
         {
             OpenFileDialog picexplorer = OpenFileDialogManager.Picture(false, "لطفا تصویر امضا را انتخاب کنید");
@@ -79,7 +94,6 @@ namespace GAMA
             btnTasvir.BackgroundImage = btnEmza.BackgroundImage = null;
         }
 
-
         #endregion
         //*************************************
 
@@ -100,11 +114,14 @@ namespace GAMA
             lblDate.Text = string.Format("تاریخ ثبت نام : {0}", StaticData.current_date);
             txtLoggedUser.Text = StaticData.current_user.FirstName + " " + StaticData.current_user.LastName;
             ControlManager.SetComboItems(mainCombo1, SqlCaptureManager.AllCourse());
-            ArrayList documents = SqlCaptureManager.RequirdDocumants();
+            string doc = SqlCaptureManager.RequirdDocumants();
+
+            string[] subDocs = doc.Split(',');
             txtDocument.Text += "*مدارک مورد نیاز*";
-            for (int i = 0; i < documents.Count; i++)
+
+            for (int i = 0; i < subDocs.Length; i++)
             {
-                txtDocument.Text += string.Format("{0}{1}-{2}", Environment.NewLine, (i + 1), documents[i]);
+                txtDocument.Text += string.Format("{0}{1}-{2}", Environment.NewLine, (i + 1), subDocs[i]);
             }
         }
         private void SetLocations()
@@ -116,13 +133,15 @@ namespace GAMA
             txtAdres.Width = txtCodePosty.Right - txtNahveMoarefi.Left;
             panel1.Controls.Add(txtDocument);
 
+            Height = panel1.Height + HeaderHeight + 150;
+
             // Y
             lblDate.Top = HeaderHeight + 15;
             panel1.Top = HeaderHeight + 70;
             pnlLoggedUser.Top = btnAdd.Top = panel1.Bottom + 20;
             mainlbl5.Top = mainlbl30.Top;
-            btnEmza.Top = mainlbl21.Top = mainlbl18.Top;
-            Locations.AlignBottoms(txtShahrie, txtDocument);
+            //btnEmza.Top = mainlbl21.Top = mainlbl18.Top;
+            //Locations.AlignBottoms(txtSabtnamDate, txtDocument);
 
             // x
             Locations.CenterWidth(this, panel1, btnAdd);

@@ -38,18 +38,11 @@ namespace MyClass
                 return "tbl004_Course";
             }
         }
-        public static string BaseInformation
+        public static string Base
         {
             get
             {
-                return "tbl005_BaseInformation";
-            }
-        }
-        public static string RequiredDocuments
-        {
-            get
-            {
-                return "tbl006_RequiredDocuments";
+                return "tbl005_Base1";
             }
         }
 

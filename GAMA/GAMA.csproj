@@ -62,6 +62,12 @@
     <Compile Include="Controls\Base\BaseBtn.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Base\BaseMaskTxt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\MaskTxtSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\Concreat\ComboSimple.cs">
       <SubType>Component</SubType>
     </Compile>
