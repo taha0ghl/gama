@@ -51,6 +51,14 @@ namespace MyClass
 
             return output;
         }
+        public static string GetField(string tableName, string fieldName, string condition)
+        {
+            string output;
+
+            output = SqlServerClass.Select(tableName, fieldName, condition);
+
+            return output;
+        }
         public static ArrayList NumberList(int first, int last)
         {
             ArrayList output = new ArrayList();

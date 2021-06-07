@@ -45,6 +45,13 @@ namespace MyClass
                 return "tbl005_Base1";
             }
         }
+        public static string SabtnamCourse
+        {
+            get
+            {
+                return "tbl006_SabtNamCourse";
+            }
+        }
 
         #endregion
         //*************************************

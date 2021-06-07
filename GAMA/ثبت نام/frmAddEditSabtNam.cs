@@ -33,17 +33,145 @@ namespace GAMA
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            return;
+            string idDore = SqlCaptureManager.GetField(TableNames.Course, "id", string.Format("courseName = N'{0}'", mainCombo1.SelectedItem));
 
-            string[] fields1 = { "sabtnamdate", "studentId", "idDore", "nahve", "typeClass", "freeTime", "Cost", "sabtnamUser", "description", "insertDate", "insertTime", "UserId" };
-            string[] values1 = { txtSabtnamDate.Text, ,, txtNahveMoarefi.Text, txtNoeClass.Text, txtVaghtAzad.Text, txtShahrie.Text, txtSabtnamUser.Text, txtDescription.Text, StaticData.current_date,, StaticData.current_user.Id };
-            //bool insert1 = SqlServerClass.InsertWithFields();
+            string date = StaticData.current_date;
+            string time = DateTimeManager.GetTime(DateTime.Now).Substring(0, 5);
+            string userId = StaticData.current_user.Id;
 
-            string[] fields2 = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "insertDate", "insertTime", "UserId" };
+            bool insert1, insert2;
 
-            if (true)
+            string[] fields1 = {
+                "sabtnamdate",
+                "studentId",
+                "idDore",
+                "nahve",
+                "typeClass",
+                "freeTime",
+                "Cost",
+                "sabtnamUser",
+                "description",
+                "insertDate",
+                "insertTime",
+                "UserId"
+            };
+            string[] values1 = {
+                txtSabtnamDate.Text,
+                txtCode.Text,
+                idDore,
+                txtNahveMoarefi.Text,
+                txtNoeClass.Text,
+                txtVaghtAzad.Text,
+                txtShahrie.Text,
+                txtSabtnamUser.Text,
+                txtDescription.Text,
+                date,
+                time,
+                userId
+            };
+
+            insert1 = SqlServerClass.InsertWithFields(
+                TableNames.SabtnamCourse,
+                fields1[0], values1[0],
+                fields1[1], values1[1],
+                fields1[2], values1[2],
+                fields1[3], values1[3],
+                fields1[4], values1[4],
+                fields1[5], values1[5],
+                fields1[6], values1[6],
+                fields1[7], values1[7],
+                fields1[8], values1[8],
+                fields1[9], values1[9],
+                fields1[10], values1[10],
+                fields1[11], values1[11]
+                );
+
+            if (!SqlServerClass.RowExists(TableNames.Student, string.Format("Id = {0}", txtCode.Text)))
             {
+                string[] fields2 = {
+                    "id",
+                    "fName",
+                    "lName",
+                    "nCode",
+                    "nationalCode",
+                    "gender",
+                    "married",
+                    "issuePlace",
+                    "birthDate",
+                    "father",
+                    "mother",
+                    "education",
+                    "tel",
+                    "mobile",
+                    "telegramNumber",
+                    "studentJob",
+                    "address",
+                    "postalCode",
+                    "email",
+                    "insertDate",
+                    "insertTime",
+                    "UserId"
+                };
+                string[] values2 = {
+                    txtCode.Text,
+                    txtName.Text,
+                    txtLName.Text,
+                    txtShomareShenasname.Text,
+                    txtMeli.Text,
+                    Convert.ToString(comboGensiat.SelectedIndex),
+                    Convert.ToString(comboTahol.SelectedIndex),
+                    txtMahalSodor.Text,
+                    txtBirthDate.Text,
+                    txtPedar.Text,
+                    txtMother.Text,
+                    txtTahsilat.Text,
+                    txtTelephone.Text,
+                    txtMobile.Text,
+                    txtTelegram.Text,
+                    txtShoghl.Text,
+                    txtAdres.Text,
+                    txtCodePosty.Text,
+                    txtEmail.Text,
+                    date,
+                    time,
+                    userId
+                };
 
+                insert2 = SqlServerClass.InsertWithFields(
+                    TableNames.Student,
+                    fields2[0], values2[0],
+                    fields2[1], values2[1],
+                    fields2[2], values2[2],
+                    fields2[3], values2[3],
+                    fields2[4], values2[4],
+                    fields2[5], values2[5],
+                    fields2[6], values2[6],
+                    fields2[7], values2[7],
+                    fields2[8], values2[8],
+                    fields2[9], values2[9],
+                    fields2[10], values2[10],
+                    fields2[11], values2[11],
+                    fields2[12], values2[12],
+                    fields2[13], values2[13],
+                    fields2[14], values2[14],
+                    fields2[15], values2[15],
+                    fields2[16], values2[16],
+                    fields2[17], values2[17],
+                    fields2[18], values2[18],
+                    fields2[19], values2[19],
+                    fields2[20], values2[20],
+                    fields2[21], values2[21]
+                    );
+            }
+            else
+            {
+                insert2 = true;
+            }
+
+            if (insert1 && insert2)
+            {
+                MessageBox.Show("با موفقیت انجام شد");
+                Close();
             }
         }
         private void BtnEmza_Click(object sender, EventArgs e)

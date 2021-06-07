@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System;
 
-namespace Test
+namespace GAMA
 {
     public static class ControlEdgeRounder
     {

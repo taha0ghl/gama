@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Test
+namespace GAMA
 {
     public class TransitionStrategy_Integer : ITransitionStrategy
     {
@@ -16,7 +16,7 @@ namespace Test
             int result = ((int)minValue) +  Convert.ToInt32(Math.Round(distinct * percent));
             target.Invoke((MethodInvoker)delegate
            {
-               property.SetValue(target, result);
+               //property.SetValue(target, result);
            });
         }
     }

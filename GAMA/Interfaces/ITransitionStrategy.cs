@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Test
+namespace GAMA
 {
     public interface ITransitionStrategy
     {
