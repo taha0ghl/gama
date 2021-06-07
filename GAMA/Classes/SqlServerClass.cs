@@ -174,7 +174,8 @@ namespace MyClass
         //_________________________________________________________________________
         public static bool InsertWithFields(string tableName, params string[] fieldNamesANDValues)
         {
-            bool yes_no = false;
+            bool output = false;
+
             SqlConnection connection = new SqlConnection();
             try
             {
@@ -195,18 +196,18 @@ namespace MyClass
                 command.CommandText = "insert into " + tableName + " (" + names + ") values (" + parameters + ")";
                 command.Connection = connection;
                 command.ExecuteNonQuery();
-                yes_no = true;
+                output = true;
             }
             catch (Exception e2)
             {
                 MessageBox.Show(e2.Message, Application.CompanyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                yes_no = false;
+                output = false;
             }
             finally
             {
                 connection.Close();
             }
-            return yes_no;
+            return output;
         }
         //_________________________________________________________________________
         public static ArrayList Search1Record_ArrayList(string tableName, string Condition = "")
@@ -252,7 +253,7 @@ namespace MyClass
         //_________________________________________________________________________
         public static bool Update(string tableName, string[] fieldNames, string[] fieldValues, string criteria)
         {
-            bool yes_no = false;
+            bool output = false;
             SqlConnection connection = new SqlConnection();
             try
             {
@@ -270,18 +271,18 @@ namespace MyClass
                 command.CommandText = "update " + tableName + " set " + parameters + " where (" + criteria + ")";
                 command.Connection = connection;
                 command.ExecuteNonQuery();
-                yes_no = true;
+                output = true;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, Application.CompanyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                yes_no = false;
+                output = false;
             }
             finally
             {
                 connection.Close();
             }
-            return yes_no;
+            return output;
         }
         //_________________________________________________________________________
         public static int RowCount(string table_or_join_table, string fieldCount, string condition = "")

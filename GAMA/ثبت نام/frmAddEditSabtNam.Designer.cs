@@ -39,6 +39,13 @@ namespace GAMA
             this.pnlLoggedUser = new GAMA.PnlSimple();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new GAMA.PnlAutoDesign();
+            this.txtDescription = new GAMA.TxtSimple();
+            this.lblSimple3 = new GAMA.LblSimple();
+            this.txtSabtnamUser = new GAMA.TxtSimple();
+            this.lblSimple2 = new GAMA.LblSimple();
+            this.txtSabtnamDate = new GAMA.MaskTxtSimple();
+            this.lblSimple1 = new GAMA.LblSimple();
+            this.txtBirthDate = new GAMA.MaskTxtSimple();
             this.btnTasvir = new GAMA.BtnSimple();
             this.btnEmza = new GAMA.BtnSimple();
             this.mainCombo1 = new GAMA.ComboSimple();
@@ -93,13 +100,6 @@ namespace GAMA
             this.txtId = new GAMA.TxtSimple();
             this.mainlbl2 = new GAMA.LblSimple();
             this.txtDocument = new GAMA.TxtSimple();
-            this.txtBirthDate = new GAMA.MaskTxtSimple();
-            this.txtSabtnamDate = new GAMA.MaskTxtSimple();
-            this.lblSimple1 = new GAMA.LblSimple();
-            this.txtSabtnamUser = new GAMA.TxtSimple();
-            this.lblSimple2 = new GAMA.LblSimple();
-            this.lblSimple3 = new GAMA.LblSimple();
-            this.txtDescription = new GAMA.TxtSimple();
             this.pnlLoggedUser.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +116,7 @@ namespace GAMA
             this.btnAdd.Font = new System.Drawing.Font("B Nazanin", 12F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.IsClicked = false;
-            this.btnAdd.Location = new System.Drawing.Point(528, 773);
+            this.btnAdd.Location = new System.Drawing.Point(530, 811);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.PareName = null;
             this.btnAdd.RowIndex = 0;
@@ -191,7 +191,7 @@ namespace GAMA
             this.pnlLoggedUser.ColumnIndex = 0;
             this.pnlLoggedUser.Controls.Add(this.txtLoggedUser);
             this.pnlLoggedUser.Controls.Add(this.mainlbl26);
-            this.pnlLoggedUser.Location = new System.Drawing.Point(70, 773);
+            this.pnlLoggedUser.Location = new System.Drawing.Point(72, 811);
             this.pnlLoggedUser.Name = "pnlLoggedUser";
             this.pnlLoggedUser.PareName = null;
             this.pnlLoggedUser.RowIndex = 0;
@@ -268,7 +268,7 @@ namespace GAMA
             this.panel1.Controls.Add(this.mainlbl1);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.mainlbl2);
-            this.panel1.Location = new System.Drawing.Point(38, 98);
+            this.panel1.Location = new System.Drawing.Point(40, 136);
             this.panel1.Name = "panel1";
             this.panel1.PareName = null;
             this.panel1.RowCount = 14;
@@ -278,6 +278,110 @@ namespace GAMA
             this.panel1.TabIndex = 0;
             this.panel1.XSpace = 25;
             this.panel1.YSpace = 5;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.ColumnIndex = 3;
+            this.txtDescription.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtDescription.Location = new System.Drawing.Point(32, 387);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PareName = null;
+            this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDescription.RowIndex = 3;
+            this.txtDescription.Size = new System.Drawing.Size(150, 150);
+            this.txtDescription.TabIndex = 133;
+            this.txtDescription.Tag = "نام خوشه";
+            this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblSimple3
+            // 
+            this.lblSimple3.AutoSize = true;
+            this.lblSimple3.ColumnIndex = 3;
+            this.lblSimple3.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.lblSimple3.ForeColor = System.Drawing.Color.Black;
+            this.lblSimple3.Location = new System.Drawing.Point(237, 387);
+            this.lblSimple3.Name = "lblSimple3";
+            this.lblSimple3.PareName = "txtDescription";
+            this.lblSimple3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSimple3.RowIndex = 3;
+            this.lblSimple3.Size = new System.Drawing.Size(75, 28);
+            this.lblSimple3.TabIndex = 132;
+            this.lblSimple3.Text = "توضیحات :";
+            // 
+            // txtSabtnamUser
+            // 
+            this.txtSabtnamUser.ColumnIndex = 2;
+            this.txtSabtnamUser.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtSabtnamUser.ForeColor = System.Drawing.Color.Black;
+            this.txtSabtnamUser.Location = new System.Drawing.Point(349, 569);
+            this.txtSabtnamUser.Name = "txtSabtnamUser";
+            this.txtSabtnamUser.PareName = null;
+            this.txtSabtnamUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSabtnamUser.RowIndex = 14;
+            this.txtSabtnamUser.Size = new System.Drawing.Size(183, 35);
+            this.txtSabtnamUser.TabIndex = 130;
+            this.txtSabtnamUser.Tag = "نام خوشه";
+            this.txtSabtnamUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblSimple2
+            // 
+            this.lblSimple2.AutoSize = true;
+            this.lblSimple2.ColumnIndex = 2;
+            this.lblSimple2.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.lblSimple2.ForeColor = System.Drawing.Color.Black;
+            this.lblSimple2.Location = new System.Drawing.Point(590, 576);
+            this.lblSimple2.Name = "lblSimple2";
+            this.lblSimple2.PareName = "txtSabtnamUser";
+            this.lblSimple2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSimple2.RowIndex = 14;
+            this.lblSimple2.Size = new System.Drawing.Size(103, 28);
+            this.lblSimple2.TabIndex = 131;
+            this.lblSimple2.Text = "ثبت نام کننده :";
+            // 
+            // txtSabtnamDate
+            // 
+            this.txtSabtnamDate.ColumnIndex = 1;
+            this.txtSabtnamDate.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtSabtnamDate.Location = new System.Drawing.Point(703, 573);
+            this.txtSabtnamDate.Mask = "1000/00/00";
+            this.txtSabtnamDate.Name = "txtSabtnamDate";
+            this.txtSabtnamDate.PareName = null;
+            this.txtSabtnamDate.RowIndex = 14;
+            this.txtSabtnamDate.Size = new System.Drawing.Size(183, 35);
+            this.txtSabtnamDate.TabIndex = 129;
+            this.txtSabtnamDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSabtnamDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblSimple1
+            // 
+            this.lblSimple1.AutoSize = true;
+            this.lblSimple1.ColumnIndex = 1;
+            this.lblSimple1.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.lblSimple1.ForeColor = System.Drawing.Color.Black;
+            this.lblSimple1.Location = new System.Drawing.Point(925, 576);
+            this.lblSimple1.Name = "lblSimple1";
+            this.lblSimple1.PareName = "txtSabtnamDate";
+            this.lblSimple1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSimple1.RowIndex = 14;
+            this.lblSimple1.Size = new System.Drawing.Size(98, 28);
+            this.lblSimple1.TabIndex = 128;
+            this.lblSimple1.Text = "تاریخ ثبت نام :";
+            // 
+            // txtBirthDate
+            // 
+            this.txtBirthDate.ColumnIndex = 1;
+            this.txtBirthDate.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtBirthDate.Location = new System.Drawing.Point(703, 204);
+            this.txtBirthDate.Mask = "1000/00/00";
+            this.txtBirthDate.Name = "txtBirthDate";
+            this.txtBirthDate.PareName = null;
+            this.txtBirthDate.RowIndex = 5;
+            this.txtBirthDate.Size = new System.Drawing.Size(183, 35);
+            this.txtBirthDate.TabIndex = 127;
+            this.txtBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBirthDate.ValidatingType = typeof(System.DateTime);
             // 
             // btnTasvir
             // 
@@ -368,6 +472,7 @@ namespace GAMA
             this.txtCode.RowIndex = 1;
             this.txtCode.Size = new System.Drawing.Size(183, 35);
             this.txtCode.TabIndex = 13;
+            this.txtCode.Text = "1234567";
             this.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mainlbl30
@@ -1109,115 +1214,11 @@ namespace GAMA
             this.txtDocument.Tag = "";
             this.txtDocument.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtBirthDate
-            // 
-            this.txtBirthDate.ColumnIndex = 1;
-            this.txtBirthDate.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.txtBirthDate.Location = new System.Drawing.Point(703, 204);
-            this.txtBirthDate.Mask = "1000/00/00";
-            this.txtBirthDate.Name = "txtBirthDate";
-            this.txtBirthDate.PareName = null;
-            this.txtBirthDate.RowIndex = 5;
-            this.txtBirthDate.Size = new System.Drawing.Size(183, 35);
-            this.txtBirthDate.TabIndex = 127;
-            this.txtBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBirthDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtSabtnamDate
-            // 
-            this.txtSabtnamDate.ColumnIndex = 1;
-            this.txtSabtnamDate.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.txtSabtnamDate.Location = new System.Drawing.Point(703, 573);
-            this.txtSabtnamDate.Mask = "1000/00/00";
-            this.txtSabtnamDate.Name = "txtSabtnamDate";
-            this.txtSabtnamDate.PareName = null;
-            this.txtSabtnamDate.RowIndex = 14;
-            this.txtSabtnamDate.Size = new System.Drawing.Size(183, 35);
-            this.txtSabtnamDate.TabIndex = 129;
-            this.txtSabtnamDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSabtnamDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // lblSimple1
-            // 
-            this.lblSimple1.AutoSize = true;
-            this.lblSimple1.ColumnIndex = 1;
-            this.lblSimple1.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.lblSimple1.ForeColor = System.Drawing.Color.Black;
-            this.lblSimple1.Location = new System.Drawing.Point(925, 576);
-            this.lblSimple1.Name = "lblSimple1";
-            this.lblSimple1.PareName = "txtSabtnamDate";
-            this.lblSimple1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblSimple1.RowIndex = 14;
-            this.lblSimple1.Size = new System.Drawing.Size(98, 28);
-            this.lblSimple1.TabIndex = 128;
-            this.lblSimple1.Text = "تاریخ ثبت نام :";
-            // 
-            // txtSabtnamUser
-            // 
-            this.txtSabtnamUser.ColumnIndex = 2;
-            this.txtSabtnamUser.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.txtSabtnamUser.ForeColor = System.Drawing.Color.Black;
-            this.txtSabtnamUser.Location = new System.Drawing.Point(349, 569);
-            this.txtSabtnamUser.Name = "txtSabtnamUser";
-            this.txtSabtnamUser.PareName = null;
-            this.txtSabtnamUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSabtnamUser.RowIndex = 14;
-            this.txtSabtnamUser.Size = new System.Drawing.Size(183, 35);
-            this.txtSabtnamUser.TabIndex = 130;
-            this.txtSabtnamUser.Tag = "نام خوشه";
-            this.txtSabtnamUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblSimple2
-            // 
-            this.lblSimple2.AutoSize = true;
-            this.lblSimple2.ColumnIndex = 2;
-            this.lblSimple2.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.lblSimple2.ForeColor = System.Drawing.Color.Black;
-            this.lblSimple2.Location = new System.Drawing.Point(590, 576);
-            this.lblSimple2.Name = "lblSimple2";
-            this.lblSimple2.PareName = "txtSabtnamUser";
-            this.lblSimple2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblSimple2.RowIndex = 14;
-            this.lblSimple2.Size = new System.Drawing.Size(103, 28);
-            this.lblSimple2.TabIndex = 131;
-            this.lblSimple2.Text = "ثبت نام کننده :";
-            // 
-            // lblSimple3
-            // 
-            this.lblSimple3.AutoSize = true;
-            this.lblSimple3.ColumnIndex = 3;
-            this.lblSimple3.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.lblSimple3.ForeColor = System.Drawing.Color.Black;
-            this.lblSimple3.Location = new System.Drawing.Point(237, 387);
-            this.lblSimple3.Name = "lblSimple3";
-            this.lblSimple3.PareName = "txtDescription";
-            this.lblSimple3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblSimple3.RowIndex = 3;
-            this.lblSimple3.Size = new System.Drawing.Size(75, 28);
-            this.lblSimple3.TabIndex = 132;
-            this.lblSimple3.Text = "توضیحات :";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.ColumnIndex = 3;
-            this.txtDescription.Font = new System.Drawing.Font("B Nazanin", 11F);
-            this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(32, 387);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.PareName = null;
-            this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtDescription.RowIndex = 3;
-            this.txtDescription.Size = new System.Drawing.Size(150, 150);
-            this.txtDescription.TabIndex = 133;
-            this.txtDescription.Tag = "نام خوشه";
-            this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // FrmAddEditSabtNam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 848);
+            this.ClientSize = new System.Drawing.Size(1157, 884);
             this.Controls.Add(this.txtDocument);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLoggedUser);

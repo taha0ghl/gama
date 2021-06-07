@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AutoDesigner.cs" />
+    <Compile Include="Classes\ControlEdgeRounder.cs" />
     <Compile Include="Controls\Base\BaseBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -89,6 +90,18 @@
     <Compile Include="Controls\Concreat\MenuStripSimple.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\FormFaider.cs" />
+    <Compile Include="Controls\Single\frmAlter.cs" />
+    <Compile Include="Interfaces\ITransitionStep.cs" />
+    <Compile Include="Interfaces\ITransitionStrategy.cs" />
+    <Compile Include="Classes\RadiusCollection.cs" />
+    <Compile Include="Controls\Single\toggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\TransitionStep.cs" />
+    <Compile Include="Classes\TransitionStrategy_Color.cs" />
+    <Compile Include="Classes\TransitionStrategy_Double.cs" />
+    <Compile Include="Classes\TransitionStrategy_Integer.cs" />
     <Compile Include="کارآموز\frmAddEditStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +119,7 @@
     <Compile Include="Interfaces\IGAMAControl.cs" />
     <Compile Include="Interfaces\IOrderable.cs" />
     <Compile Include="Classes\Theme.cs" />
-    <Compile Include="Controls\Clock.cs">
+    <Compile Include="Controls\Single\Clock.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Enums\Rank.cs" />
