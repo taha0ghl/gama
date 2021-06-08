@@ -17,7 +17,7 @@ namespace GAMA
         public FrmDatePicker(int year, int month, int day, string[] monthNames)
         {
             InitializeComponent();
-            new MovableForm(pnlHeader);
+            new FormDrager(pnlHeader);
             Year = year;
             Month = month;
             Day = day;
@@ -141,7 +141,7 @@ namespace GAMA
 
         private PersianDayOfWeek FindFirstDayOfMonth()
         {
-            return Calendar.GetDayOfWeek(new DateTime((int)NumYear.Value, LstMonth.SelectedItemIndex + 1, 1, new PersianCalendar())).PersionDayOfWeek();
+            return Calendar.GetDayOfWeek(new DateTime((int)NumYear.Value, LstMonth.SelectedItemIndex + 1, 1, new PersianCalendar())).ConvertToPersionDayOfWeek();
         }
 
         private DayItem CreateDayItem(string text, int tag)

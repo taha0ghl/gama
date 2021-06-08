@@ -70,7 +70,7 @@ namespace MyClass
 
             return output;
         }
-        public static PersianDayOfWeek PersionDayOfWeek(this DayOfWeek date)
+        public static PersianDayOfWeek ConvertToPersionDayOfWeek(this DayOfWeek date)
         {
             switch (date)
             {

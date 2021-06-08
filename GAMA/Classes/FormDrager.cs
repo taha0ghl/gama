@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GAMA
 {
-    public class MovableForm
+    public class FormDrager
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -18,7 +18,7 @@ namespace GAMA
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public MovableForm(params Control[] controls)
+        public FormDrager(params Control[] controls)
         {
             foreach (var ctrl in controls)
             {
