@@ -23,8 +23,10 @@ namespace MyClass
                 connection.ConnectionString = ConnectionString;
                 connection.Open();
                 {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = connection;
+                    SqlCommand cmd = new SqlCommand
+                    {
+                        Connection = connection
+                    };
                     string s = "";
                     for (int j = 0; j < valuesData.Length; j++)
                     {
@@ -251,9 +253,9 @@ namespace MyClass
             return a;
         }
         //_________________________________________________________________________
-        public static bool Update(string tableName, string[] fieldNames, string[] fieldValues, string criteria)
+        public static bool Update(string tableName, string[] fieldNames, object[] fieldValues, string criteria)
         {
-            bool output = false;
+            bool yes_no = false;
             SqlConnection connection = new SqlConnection();
             try
             {
@@ -265,24 +267,24 @@ namespace MyClass
                 for (int i = 0; i < fieldNames.Length; i++)
                 {
                     parameters += fieldNames[i] + "=@" + "Field" + i + ",";
-                    command.Parameters.AddWithValue("Field" + i, fieldValues[i].ToString());
+                    command.Parameters.AddWithValue("Field" + i, fieldValues[i]);
                 }
                 parameters = parameters.Remove(parameters.Length - 1);//end (,) remove
                 command.CommandText = "update " + tableName + " set " + parameters + " where (" + criteria + ")";
                 command.Connection = connection;
                 command.ExecuteNonQuery();
-                output = true;
+                yes_no = true;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, Application.CompanyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                output = false;
+                yes_no = false;
             }
             finally
             {
                 connection.Close();
             }
-            return output;
+            return yes_no;
         }
         //_________________________________________________________________________
         public static int RowCount(string table_or_join_table, string fieldCount, string condition = "")
@@ -357,6 +359,67 @@ namespace MyClass
                 MessageBox.Show(ex.Message);
                 return output;
             }
+        }
+        //_________________________________________________________________________
+        public static DataRow SelectOneRow(string tableName, string[] fields, string condition = "")
+        {
+            if (condition != string.Empty && !condition.ToUpper().StartsWith("WHERE"))
+            {
+                condition = " WHERE(" + condition + ")";
+            }
+            DataRow result = null;
+            SqlConnection connection = new SqlConnection();
+            try
+            {
+                connection.ConnectionString = ConnectionString;
+                connection.Open();
+                SqlDataAdapter sq = new SqlDataAdapter(string.Format("SELECT TOP 1 {0} From {1} {2}", String.Join(", ", fields), tableName, condition), connection);
+                DataTable table = new DataTable();
+                sq.Fill(table);
+
+                if (table != null)
+                    result = table.Rows[0];
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, Application.CompanyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return result;
+        }
+        //_________________________________________________________________________
+        public static object ExecuteScalerFunction(string functionName, string[] parameterNames, SqlDbType[] parameterTypes, SqlDbType returnType, params object[] parameters)
+        {
+            object result = null;
+            SqlConnection connection = new SqlConnection();
+            try
+            {
+                connection.ConnectionString = ConnectionString;
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = functionName;
+                command.CommandType = CommandType.StoredProcedure;
+                for (int i = 0; i < parameters.Length; i++)
+                    command.Parameters.Add(parameterNames[i], parameterTypes[i]).Value = parameters[i];
+                SqlParameter returnValue = command.Parameters.Add("@RETURN_VALUE", returnType);
+                returnValue.Direction = ParameterDirection.ReturnValue;
+                command.ExecuteNonQuery();
+                result = returnValue.Value;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, Application.CompanyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return result;
         }
         //_________________________________________________________________________
         public static string Select(string table, string fieldName, string condition = "")

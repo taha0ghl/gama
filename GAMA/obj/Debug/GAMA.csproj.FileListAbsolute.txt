@@ -84,3 +84,34 @@ C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.CoreCompileI
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.CopyComplete
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.exe
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.pdb
+F:\project\GAMA\gama\GAMA\bin\Debug\GAMA.exe
+F:\project\GAMA\gama\GAMA\bin\Debug\GAMA.pdb
+F:\project\GAMA\gama\GAMA\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\project\GAMA\gama\GAMA\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+F:\project\GAMA\gama\GAMA\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+F:\project\GAMA\gama\GAMA\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\project\GAMA\gama\GAMA\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csprojAssemblyReference.cache
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmMaster.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.DayItem.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.HorizontalListNavigator.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmDatePicker.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditSabtNam.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmStudent.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditBranch.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmMain.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.Properties.Resources.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditCourse.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditGroup.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmBranch.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.frmDetails.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmGroup.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmMostanadat.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmShowAcademy.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmStandard.resources
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csproj.GenerateResource.cache
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csproj.CoreCompileInputs.cache
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csproj.CopyComplete
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.exe
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.pdb
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditStudent.resources

@@ -17,7 +17,7 @@ namespace MyClass
             { "frmshowacademy", new FrmShowAcademy() },
             { "frmmostanadat", new  FrmMostanadat() },
             { "frmstudent", new FrmStudent() },
-            { "frmaddeditstudent", new frmAddEditStudent() },
+            { "frmaddeditstudent", new FrmAddEditStudent(Moods.Add) },
             { "frmaddeditsabtnam", new FrmAddEditSabtNam(Moods.Add)},
             { "frmsabtnam", new FrmSabtNam() }
         };
