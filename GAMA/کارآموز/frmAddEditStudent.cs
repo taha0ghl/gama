@@ -85,14 +85,14 @@ namespace GAMA
 
         private void BtnChooseSignature_Click(object sender, EventArgs e)
         {
-            if (SelectImageFromFile(out Image img))
-                picSignature.Image = img;
+            //if (SelectImageFromFile(out Image img))
+            //    picSignature.Image = img;
         }
 
         private void BtnChooseImage_Click(object sender, EventArgs e)
         {
-            if (SelectImageFromFile(out Image img))
-                picImage.Image = img;
+            //if (SelectImageFromFile(out Image img))
+            //    picImage.Image = img;
         }
 
         private void PicBirthDate_Click(object sender, EventArgs e)
@@ -191,8 +191,8 @@ namespace GAMA
             txtAddress.Text = row["Address"].ToString();
             txtPostalCode.Text = row["PostalCode"].ToString();
             txtEmail.Text = row["Email"].ToString();
-            picImage.Image = ConvertBinaryToImageIfNotNull(row["Pic"]);
-            picSignature.Image = ConvertBinaryToImageIfNotNull(row["Signature"]);
+            //picImage.Image = ConvertBinaryToImageIfNotNull(row["Pic"]);
+            //picSignature.Image = ConvertBinaryToImageIfNotNull(row["Signature"]);
         }
 
         private object[] GetDataFromForm()
@@ -216,9 +216,9 @@ namespace GAMA
                 txtStudentJob.Text,
                 txtAddress.Text,
                 txtPostalCode.Text,
-                txtEmail.Text,
-                ConvertImageToBankValue(picImage.Image),
-                ConvertImageToBankValue(picSignature.Image)
+                txtEmail.Text
+                //ConvertImageToBankValue(picImage.Image),
+                //ConvertImageToBankValue(picSignature.Image)
             };
             return result;
         }

@@ -16,7 +16,7 @@ namespace GAMA
             int result = ((int)minValue) +  Convert.ToInt32(Math.Round(distinct * percent));
             target.Invoke((MethodInvoker)delegate
            {
-               //property.SetValue(target, result);
+               property.SetValue(target, result);
            });
         }
     }

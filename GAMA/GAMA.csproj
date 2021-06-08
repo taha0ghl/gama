@@ -151,7 +151,7 @@
     <Compile Include="Controls\Concreat\BtnSubOptions.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\FarsiMessageBox.cs" />
+    <Compile Include="Dialogs\FarsiMessageBox.cs" />
     <Compile Include="Classes\FormDictionary.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Classes\SqlCaptureManager.cs" />
