@@ -14,6 +14,18 @@ namespace GAMA
 {
     public partial class FrmDatePicker : Form
     {
+        public FrmDatePicker(int year, int month, int day, string[] monthNames)
+        {
+            InitializeComponent();
+            new MovableForm(pnlHeader);
+            Year = year;
+            Month = month;
+            Day = day;
+            LstMonth.List = monthNames;
+            LstMonth.SelectedItemIndex = Month - 1;
+            SetDaysToCalendar();
+        }
+
         #region Fields
 
         private Color _dayItemsForeColor;
@@ -111,18 +123,6 @@ namespace GAMA
 
 
         #region Methodes
-
-        public FrmDatePicker(int year, int month, int day, string[] monthDays)
-        {
-            InitializeComponent();
-            new MovableForm(pnlHeader);
-            Year = year;
-            Month = month;
-            Day = day;
-            LstMonth.List = monthDays;
-            LstMonth.SelectedItemIndex = Month - 1;
-            SetDaysToCalendar();
-        }
 
         private void SetDaysToCalendar()
         {
