@@ -13,7 +13,7 @@ namespace GAMA
 {
     public partial class FrmAddEditStudent : FrmMaster
     {
-        public FrmAddEditStudent(Moods mood, string id = "1234567")
+        public FrmAddEditStudent(Moods mood, string id = "")
         {
             InitializeComponent();
             InitialDesign();
@@ -92,7 +92,16 @@ namespace GAMA
 
         private void PicBirthDate_Click(object sender, EventArgs e)
         {
-
+            string date = DateTimeManager.GetDate(DateTime.Now);
+            int year = int.Parse(date.Substring(0, 4));
+            int month = int.Parse(date.Substring(5, 2));
+            int day = int.Parse(date.Substring(8, 2));
+            FrmDatePicker datePicker = new FrmDatePicker(year, month, day, Enum.GetNames(typeof(PersianMonthNames)));
+            Locations.AlignCenters(this, datePicker);
+            Locations.AlignMiddles(this, datePicker);
+            datePicker.StartPosition = FormStartPosition.Manual;
+            if (datePicker.ShowDialog(this) == DialogResult.OK)
+                txtBirthDate.Text = String.Format("{0}/{1}/{2}", datePicker.Year.ToString().PadLeft(4, '0'), datePicker.Month.ToString().PadLeft(2, '0'), datePicker.Day.ToString().PadLeft(2, '0'));
         }
 
         #endregion

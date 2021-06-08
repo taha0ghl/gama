@@ -31,6 +31,7 @@ namespace GAMA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddEditStudent));
             this.pnlAutoDesign1 = new GAMA.PnlAutoDesign();
+            this.picBirthDate = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.rdbGenderWoman = new System.Windows.Forms.RadioButton();
             this.rdbGenderMan = new System.Windows.Forms.RadioButton();
@@ -41,6 +42,8 @@ namespace GAMA
             this.label20 = new System.Windows.Forms.Label();
             this.btnChooseImage = new System.Windows.Forms.Button();
             this.btnChooseSignature = new System.Windows.Forms.Button();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.picSignature = new System.Windows.Forms.PictureBox();
             this.txtFather = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -75,14 +78,11 @@ namespace GAMA
             this.label10 = new System.Windows.Forms.Label();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.picBirthDate = new System.Windows.Forms.PictureBox();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.picSignature = new System.Windows.Forms.PictureBox();
             this.btnAdd = new GAMA.BtnSimple();
             this.pnlAutoDesign1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBirthDate)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignature)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +148,17 @@ namespace GAMA
             this.pnlAutoDesign1.XSpace = 25;
             this.pnlAutoDesign1.YSpace = 5;
             // 
+            // picBirthDate
+            // 
+            this.picBirthDate.Image = global::GAMA.Properties.Resources.DatePicker;
+            this.picBirthDate.Location = new System.Drawing.Point(411, 223);
+            this.picBirthDate.Name = "picBirthDate";
+            this.picBirthDate.Size = new System.Drawing.Size(28, 24);
+            this.picBirthDate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBirthDate.TabIndex = 20;
+            this.picBirthDate.TabStop = false;
+            this.picBirthDate.Click += new System.EventHandler(this.PicBirthDate_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.rdbGenderWoman);
@@ -185,6 +196,7 @@ namespace GAMA
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(134, 24);
             this.txtPostalCode.TabIndex = 12;
+            this.txtPostalCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // flowLayoutPanel2
             // 
@@ -247,12 +259,33 @@ namespace GAMA
             this.btnChooseSignature.UseVisualStyleBackColor = true;
             this.btnChooseSignature.Click += new System.EventHandler(this.BtnChooseSignature_Click);
             // 
+            // picImage
+            // 
+            this.picImage.Image = global::GAMA.Properties.Resources.Contact;
+            this.picImage.Location = new System.Drawing.Point(16, 110);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(134, 63);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImage.TabIndex = 3;
+            this.picImage.TabStop = false;
+            // 
+            // picSignature
+            // 
+            this.picSignature.Image = global::GAMA.Properties.Resources.Signature;
+            this.picSignature.Location = new System.Drawing.Point(16, 13);
+            this.picSignature.Name = "picSignature";
+            this.picSignature.Size = new System.Drawing.Size(134, 63);
+            this.picSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSignature.TabIndex = 3;
+            this.picSignature.TabStop = false;
+            // 
             // txtFather
             // 
             this.txtFather.Location = new System.Drawing.Point(305, 253);
             this.txtFather.Name = "txtFather";
             this.txtFather.Size = new System.Drawing.Size(134, 24);
             this.txtFather.TabIndex = 8;
+            this.txtFather.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -270,6 +303,7 @@ namespace GAMA
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(134, 24);
             this.txtEmail.TabIndex = 19;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBirthDate
             // 
@@ -277,6 +311,7 @@ namespace GAMA
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(106, 24);
             this.txtBirthDate.TabIndex = 7;
+            this.txtBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -304,6 +339,7 @@ namespace GAMA
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(134, 24);
             this.txtAddress.TabIndex = 18;
+            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtIssuePlace
             // 
@@ -311,6 +347,7 @@ namespace GAMA
             this.txtIssuePlace.Name = "txtIssuePlace";
             this.txtIssuePlace.Size = new System.Drawing.Size(134, 24);
             this.txtIssuePlace.TabIndex = 6;
+            this.txtIssuePlace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
             // 
@@ -338,6 +375,7 @@ namespace GAMA
             this.txtStudentJob.Name = "txtStudentJob";
             this.txtStudentJob.Size = new System.Drawing.Size(134, 24);
             this.txtStudentJob.TabIndex = 17;
+            this.txtStudentJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -365,6 +403,7 @@ namespace GAMA
             this.txtTelegramID.Name = "txtTelegramID";
             this.txtTelegramID.Size = new System.Drawing.Size(134, 24);
             this.txtTelegramID.TabIndex = 16;
+            this.txtTelegramID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
@@ -392,6 +431,7 @@ namespace GAMA
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(134, 24);
             this.txtMobile.TabIndex = 15;
+            this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
@@ -429,6 +469,7 @@ namespace GAMA
             this.txtNCode.Name = "txtNCode";
             this.txtNCode.Size = new System.Drawing.Size(134, 24);
             this.txtNCode.TabIndex = 3;
+            this.txtNCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTell
             // 
@@ -436,6 +477,7 @@ namespace GAMA
             this.txtTell.Name = "txtTell";
             this.txtTell.Size = new System.Drawing.Size(134, 24);
             this.txtTell.TabIndex = 11;
+            this.txtTell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -463,6 +505,7 @@ namespace GAMA
             this.txtNationalCode.Name = "txtNationalCode";
             this.txtNationalCode.Size = new System.Drawing.Size(134, 24);
             this.txtNationalCode.TabIndex = 2;
+            this.txtNationalCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -490,6 +533,7 @@ namespace GAMA
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(134, 24);
             this.txtLName.TabIndex = 1;
+            this.txtLName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtEducation
             // 
@@ -497,6 +541,7 @@ namespace GAMA
             this.txtEducation.Name = "txtEducation";
             this.txtEducation.Size = new System.Drawing.Size(134, 24);
             this.txtEducation.TabIndex = 10;
+            this.txtEducation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMother
             // 
@@ -504,6 +549,7 @@ namespace GAMA
             this.txtMother.Name = "txtMother";
             this.txtMother.Size = new System.Drawing.Size(134, 24);
             this.txtMother.TabIndex = 9;
+            this.txtMother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -531,6 +577,7 @@ namespace GAMA
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(134, 24);
             this.txtFName.TabIndex = 0;
+            this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -541,37 +588,6 @@ namespace GAMA
             this.label1.Size = new System.Drawing.Size(29, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "نام :";
-            // 
-            // picBirthDate
-            // 
-            this.picBirthDate.Image = global::GAMA.Properties.Resources.DatePicker;
-            this.picBirthDate.Location = new System.Drawing.Point(411, 223);
-            this.picBirthDate.Name = "picBirthDate";
-            this.picBirthDate.Size = new System.Drawing.Size(28, 24);
-            this.picBirthDate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBirthDate.TabIndex = 20;
-            this.picBirthDate.TabStop = false;
-            this.picBirthDate.Click += new System.EventHandler(this.PicBirthDate_Click);
-            // 
-            // picImage
-            // 
-            this.picImage.Image = global::GAMA.Properties.Resources.Contact;
-            this.picImage.Location = new System.Drawing.Point(16, 110);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(134, 63);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImage.TabIndex = 3;
-            this.picImage.TabStop = false;
-            // 
-            // picSignature
-            // 
-            this.picSignature.Image = global::GAMA.Properties.Resources.Signature;
-            this.picSignature.Location = new System.Drawing.Point(16, 13);
-            this.picSignature.Name = "picSignature";
-            this.picSignature.Size = new System.Drawing.Size(134, 63);
-            this.picSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSignature.TabIndex = 3;
-            this.picSignature.TabStop = false;
             // 
             // btnAdd
             // 
@@ -585,7 +601,7 @@ namespace GAMA
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.IsClicked = false;
-            this.btnAdd.Location = new System.Drawing.Point(286, 434);
+            this.btnAdd.Location = new System.Drawing.Point(288, 445);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.PareName = null;
@@ -596,25 +612,25 @@ namespace GAMA
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // frmAddEditStudent
+            // FrmAddEditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 470);
+            this.ClientSize = new System.Drawing.Size(613, 486);
             this.Controls.Add(this.pnlAutoDesign1);
             this.Controls.Add(this.btnAdd);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frmAddEditStudent";
+            this.Name = "FrmAddEditStudent";
             this.Text = "frmAddEditStudent";
             this.Controls.SetChildIndex(this.btnAdd, 0);
             this.Controls.SetChildIndex(this.pnlAutoDesign1, 0);
             this.pnlAutoDesign1.ResumeLayout(false);
             this.pnlAutoDesign1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBirthDate)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBirthDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignature)).EndInit();
             this.ResumeLayout(false);
