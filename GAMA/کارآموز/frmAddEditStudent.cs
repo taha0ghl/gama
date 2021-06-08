@@ -61,6 +61,11 @@ namespace GAMA
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            if (!ControlManager.CheckEmptyControls(pnlAutoDesign1))
+            {
+                MessageBox.Show("لطفا همه فیلد ها را پر کنید.", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             bool success = false;
             switch (mood)
             {
@@ -224,8 +229,7 @@ namespace GAMA
             {
                 DateTimeManager.GetDate(DateTime.Now),
                 DateTimeManager.GetTime(DateTime.Now).Substring(0, 5),
-                //StaticData.current_user.Id
-                1
+                StaticData.current_user.Id
             };
             return result;
             throw new NotImplementedException();

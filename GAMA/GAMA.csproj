@@ -60,7 +60,7 @@
   <ItemGroup>
     <Compile Include="Classes\AutoDesigner.cs" />
     <Compile Include="Classes\ControlEdgeRounder.cs" />
-    <Compile Include="Classes\MovableForm.cs" />
+    <Compile Include="Classes\FormDrager.cs" />
     <Compile Include="Controls\Base\BaseBtn.cs">
       <SubType>Component</SubType>
     </Compile>

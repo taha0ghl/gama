@@ -144,7 +144,7 @@ namespace GAMA
             this.pnlAutoDesign1.RowIndex = 0;
             this.pnlAutoDesign1.Size = new System.Drawing.Size(599, 397);
             this.pnlAutoDesign1.Space = 10;
-            this.pnlAutoDesign1.TabIndex = 14;
+            this.pnlAutoDesign1.TabIndex = 0;
             this.pnlAutoDesign1.XSpace = 25;
             this.pnlAutoDesign1.YSpace = 5;
             // 
@@ -193,6 +193,7 @@ namespace GAMA
             // txtPostalCode
             // 
             this.txtPostalCode.Location = new System.Drawing.Point(305, 371);
+            this.txtPostalCode.MaxLength = 10;
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(134, 24);
             this.txtPostalCode.TabIndex = 12;
@@ -282,6 +283,7 @@ namespace GAMA
             // txtFather
             // 
             this.txtFather.Location = new System.Drawing.Point(305, 253);
+            this.txtFather.MaxLength = 50;
             this.txtFather.Name = "txtFather";
             this.txtFather.Size = new System.Drawing.Size(134, 24);
             this.txtFather.TabIndex = 8;
@@ -299,15 +301,17 @@ namespace GAMA
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(16, 328);
+            this.txtEmail.Location = new System.Drawing.Point(17, 298);
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(134, 24);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 18;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBirthDate
             // 
             this.txtBirthDate.Location = new System.Drawing.Point(305, 223);
+            this.txtBirthDate.MaxLength = 10;
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(106, 24);
             this.txtBirthDate.TabIndex = 7;
@@ -317,7 +321,7 @@ namespace GAMA
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(241, 328);
+            this.label17.Location = new System.Drawing.Point(242, 298);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(42, 18);
             this.label17.TabIndex = 0;
@@ -335,15 +339,18 @@ namespace GAMA
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(16, 298);
+            this.txtAddress.Location = new System.Drawing.Point(17, 328);
+            this.txtAddress.MaxLength = 200;
+            this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(134, 24);
-            this.txtAddress.TabIndex = 18;
+            this.txtAddress.Size = new System.Drawing.Size(134, 67);
+            this.txtAddress.TabIndex = 19;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtIssuePlace
             // 
             this.txtIssuePlace.Location = new System.Drawing.Point(305, 193);
+            this.txtIssuePlace.MaxLength = 50;
             this.txtIssuePlace.Name = "txtIssuePlace";
             this.txtIssuePlace.Size = new System.Drawing.Size(134, 24);
             this.txtIssuePlace.TabIndex = 6;
@@ -353,7 +360,7 @@ namespace GAMA
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(239, 298);
+            this.label16.Location = new System.Drawing.Point(240, 328);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 18);
             this.label16.TabIndex = 0;
@@ -400,6 +407,7 @@ namespace GAMA
             // txtTelegramID
             // 
             this.txtTelegramID.Location = new System.Drawing.Point(16, 238);
+            this.txtTelegramID.MaxLength = 50;
             this.txtTelegramID.Name = "txtTelegramID";
             this.txtTelegramID.Size = new System.Drawing.Size(134, 24);
             this.txtTelegramID.TabIndex = 16;
@@ -428,6 +436,7 @@ namespace GAMA
             // txtMobile
             // 
             this.txtMobile.Location = new System.Drawing.Point(16, 208);
+            this.txtMobile.MaxLength = 50;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(134, 24);
             this.txtMobile.TabIndex = 15;
@@ -466,6 +475,7 @@ namespace GAMA
             // txtNCode
             // 
             this.txtNCode.Location = new System.Drawing.Point(305, 103);
+            this.txtNCode.MaxLength = 10;
             this.txtNCode.Name = "txtNCode";
             this.txtNCode.Size = new System.Drawing.Size(134, 24);
             this.txtNCode.TabIndex = 3;
@@ -474,6 +484,7 @@ namespace GAMA
             // txtTell
             // 
             this.txtTell.Location = new System.Drawing.Point(305, 341);
+            this.txtTell.MaxLength = 50;
             this.txtTell.Name = "txtTell";
             this.txtTell.Size = new System.Drawing.Size(134, 24);
             this.txtTell.TabIndex = 11;
@@ -502,6 +513,7 @@ namespace GAMA
             // txtNationalCode
             // 
             this.txtNationalCode.Location = new System.Drawing.Point(305, 73);
+            this.txtNationalCode.MaxLength = 10;
             this.txtNationalCode.Name = "txtNationalCode";
             this.txtNationalCode.Size = new System.Drawing.Size(134, 24);
             this.txtNationalCode.TabIndex = 2;
@@ -530,6 +542,7 @@ namespace GAMA
             // txtLName
             // 
             this.txtLName.Location = new System.Drawing.Point(305, 43);
+            this.txtLName.MaxLength = 50;
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(134, 24);
             this.txtLName.TabIndex = 1;
@@ -538,6 +551,7 @@ namespace GAMA
             // txtEducation
             // 
             this.txtEducation.Location = new System.Drawing.Point(305, 313);
+            this.txtEducation.MaxLength = 50;
             this.txtEducation.Name = "txtEducation";
             this.txtEducation.Size = new System.Drawing.Size(134, 24);
             this.txtEducation.TabIndex = 10;
@@ -546,6 +560,7 @@ namespace GAMA
             // txtMother
             // 
             this.txtMother.Location = new System.Drawing.Point(305, 283);
+            this.txtMother.MaxLength = 50;
             this.txtMother.Name = "txtMother";
             this.txtMother.Size = new System.Drawing.Size(134, 24);
             this.txtMother.TabIndex = 9;
@@ -574,6 +589,7 @@ namespace GAMA
             // txtFName
             // 
             this.txtFName.Location = new System.Drawing.Point(305, 13);
+            this.txtFName.MaxLength = 50;
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(134, 24);
             this.txtFName.TabIndex = 0;
@@ -607,7 +623,7 @@ namespace GAMA
             this.btnAdd.PareName = null;
             this.btnAdd.RowIndex = 0;
             this.btnAdd.Size = new System.Drawing.Size(71, 30);
-            this.btnAdd.TabIndex = 0;
+            this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ثبت";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);

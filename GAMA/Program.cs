@@ -15,7 +15,7 @@ namespace GAMA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddEditStudent(Moods.Add));
+            Application.Run(new FrmMain());
         }
     }
 }
