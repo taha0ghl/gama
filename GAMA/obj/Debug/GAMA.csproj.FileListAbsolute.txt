@@ -115,3 +115,7 @@ F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csproj.CopyComplete
 F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.exe
 F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.pdb
 F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditStudent.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.DayItem.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.HorizontalListNavigator.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmDatePicker.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditStudent.resources

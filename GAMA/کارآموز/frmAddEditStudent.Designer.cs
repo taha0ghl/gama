@@ -29,6 +29,7 @@ namespace GAMA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddEditStudent));
             this.pnlAutoDesign1 = new GAMA.PnlAutoDesign();
             this.picBirthDate = new System.Windows.Forms.PictureBox();
@@ -40,10 +41,6 @@ namespace GAMA
             this.rdbMarriedYes = new System.Windows.Forms.RadioButton();
             this.rdbMarriedNo = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnChooseImage = new System.Windows.Forms.Button();
-            this.btnChooseSignature = new System.Windows.Forms.Button();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.picSignature = new System.Windows.Forms.PictureBox();
             this.txtFather = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -79,12 +76,13 @@ namespace GAMA
             this.txtFName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new GAMA.BtnSimple();
+            this.btnTasvir = new GAMA.BtnSimple();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnSimple1 = new GAMA.BtnSimple();
             this.pnlAutoDesign1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBirthDate)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSignature)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAutoDesign1
@@ -92,15 +90,13 @@ namespace GAMA
             this.pnlAutoDesign1.BackColor = System.Drawing.Color.Transparent;
             this.pnlAutoDesign1.ColumnCount = 0;
             this.pnlAutoDesign1.ColumnIndex = 0;
+            this.pnlAutoDesign1.Controls.Add(this.btnSimple1);
+            this.pnlAutoDesign1.Controls.Add(this.btnTasvir);
             this.pnlAutoDesign1.Controls.Add(this.picBirthDate);
             this.pnlAutoDesign1.Controls.Add(this.flowLayoutPanel1);
             this.pnlAutoDesign1.Controls.Add(this.txtPostalCode);
             this.pnlAutoDesign1.Controls.Add(this.flowLayoutPanel2);
             this.pnlAutoDesign1.Controls.Add(this.label20);
-            this.pnlAutoDesign1.Controls.Add(this.btnChooseImage);
-            this.pnlAutoDesign1.Controls.Add(this.btnChooseSignature);
-            this.pnlAutoDesign1.Controls.Add(this.picImage);
-            this.pnlAutoDesign1.Controls.Add(this.picSignature);
             this.pnlAutoDesign1.Controls.Add(this.txtFather);
             this.pnlAutoDesign1.Controls.Add(this.label9);
             this.pnlAutoDesign1.Controls.Add(this.txtEmail);
@@ -136,13 +132,14 @@ namespace GAMA
             this.pnlAutoDesign1.Controls.Add(this.txtFName);
             this.pnlAutoDesign1.Controls.Add(this.label1);
             this.pnlAutoDesign1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAutoDesign1.Location = new System.Drawing.Point(7, 32);
+            this.pnlAutoDesign1.Location = new System.Drawing.Point(9, 39);
+            this.pnlAutoDesign1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlAutoDesign1.Name = "pnlAutoDesign1";
             this.pnlAutoDesign1.PareName = null;
             this.pnlAutoDesign1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.pnlAutoDesign1.RowCount = 0;
             this.pnlAutoDesign1.RowIndex = 0;
-            this.pnlAutoDesign1.Size = new System.Drawing.Size(599, 397);
+            this.pnlAutoDesign1.Size = new System.Drawing.Size(908, 578);
             this.pnlAutoDesign1.Space = 10;
             this.pnlAutoDesign1.TabIndex = 0;
             this.pnlAutoDesign1.XSpace = 25;
@@ -151,9 +148,10 @@ namespace GAMA
             // picBirthDate
             // 
             this.picBirthDate.Image = global::GAMA.Properties.Resources.DatePicker;
-            this.picBirthDate.Location = new System.Drawing.Point(411, 223);
+            this.picBirthDate.Location = new System.Drawing.Point(650, 282);
+            this.picBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBirthDate.Name = "picBirthDate";
-            this.picBirthDate.Size = new System.Drawing.Size(28, 24);
+            this.picBirthDate.Size = new System.Drawing.Size(37, 30);
             this.picBirthDate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBirthDate.TabIndex = 20;
             this.picBirthDate.TabStop = false;
@@ -163,17 +161,20 @@ namespace GAMA
             // 
             this.flowLayoutPanel1.Controls.Add(this.rdbGenderWoman);
             this.flowLayoutPanel1.Controls.Add(this.rdbGenderMan);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(305, 133);
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(509, 172);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(134, 24);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(179, 30);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // rdbGenderWoman
             // 
             this.rdbGenderWoman.AutoSize = true;
-            this.rdbGenderWoman.Location = new System.Drawing.Point(90, 3);
+            this.rdbGenderWoman.Location = new System.Drawing.Point(126, 4);
+            this.rdbGenderWoman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbGenderWoman.Name = "rdbGenderWoman";
-            this.rdbGenderWoman.Size = new System.Drawing.Size(41, 22);
+            this.rdbGenderWoman.Size = new System.Drawing.Size(49, 32);
             this.rdbGenderWoman.TabIndex = 0;
             this.rdbGenderWoman.TabStop = true;
             this.rdbGenderWoman.Text = "زن";
@@ -182,9 +183,10 @@ namespace GAMA
             // rdbGenderMan
             // 
             this.rdbGenderMan.AutoSize = true;
-            this.rdbGenderMan.Location = new System.Drawing.Point(40, 3);
+            this.rdbGenderMan.Location = new System.Drawing.Point(65, 4);
+            this.rdbGenderMan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbGenderMan.Name = "rdbGenderMan";
-            this.rdbGenderMan.Size = new System.Drawing.Size(44, 22);
+            this.rdbGenderMan.Size = new System.Drawing.Size(53, 32);
             this.rdbGenderMan.TabIndex = 1;
             this.rdbGenderMan.TabStop = true;
             this.rdbGenderMan.Text = "مرد";
@@ -192,10 +194,12 @@ namespace GAMA
             // 
             // txtPostalCode
             // 
-            this.txtPostalCode.Location = new System.Drawing.Point(305, 371);
+            this.txtPostalCode.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtPostalCode.Location = new System.Drawing.Point(509, 465);
+            this.txtPostalCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPostalCode.MaxLength = 10;
             this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(134, 24);
+            this.txtPostalCode.Size = new System.Drawing.Size(177, 35);
             this.txtPostalCode.TabIndex = 12;
             this.txtPostalCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -203,17 +207,20 @@ namespace GAMA
             // 
             this.flowLayoutPanel2.Controls.Add(this.rdbMarriedYes);
             this.flowLayoutPanel2.Controls.Add(this.rdbMarriedNo);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(305, 164);
+            this.flowLayoutPanel2.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(509, 210);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(134, 24);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(179, 30);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
             // rdbMarriedYes
             // 
             this.rdbMarriedYes.AutoSize = true;
-            this.rdbMarriedYes.Location = new System.Drawing.Point(92, 3);
+            this.rdbMarriedYes.Location = new System.Drawing.Point(127, 4);
+            this.rdbMarriedYes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbMarriedYes.Name = "rdbMarriedYes";
-            this.rdbMarriedYes.Size = new System.Drawing.Size(39, 22);
+            this.rdbMarriedYes.Size = new System.Drawing.Size(48, 32);
             this.rdbMarriedYes.TabIndex = 0;
             this.rdbMarriedYes.TabStop = true;
             this.rdbMarriedYes.Text = "بله";
@@ -222,9 +229,10 @@ namespace GAMA
             // rdbMarriedNo
             // 
             this.rdbMarriedNo.AutoSize = true;
-            this.rdbMarriedNo.Location = new System.Drawing.Point(41, 3);
+            this.rdbMarriedNo.Location = new System.Drawing.Point(63, 4);
+            this.rdbMarriedNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbMarriedNo.Name = "rdbMarriedNo";
-            this.rdbMarriedNo.Size = new System.Drawing.Size(45, 22);
+            this.rdbMarriedNo.Size = new System.Drawing.Size(56, 32);
             this.rdbMarriedNo.TabIndex = 1;
             this.rdbMarriedNo.TabStop = true;
             this.rdbMarriedNo.Text = "خیر";
@@ -233,375 +241,385 @@ namespace GAMA
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(528, 371);
+            this.label20.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label20.Location = new System.Drawing.Point(806, 465);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(57, 18);
+            this.label20.Size = new System.Drawing.Size(74, 28);
             this.label20.TabIndex = 7;
             this.label20.Text = "کد پستی :";
             // 
-            // btnChooseImage
-            // 
-            this.btnChooseImage.Location = new System.Drawing.Point(16, 175);
-            this.btnChooseImage.Name = "btnChooseImage";
-            this.btnChooseImage.Size = new System.Drawing.Size(135, 27);
-            this.btnChooseImage.TabIndex = 14;
-            this.btnChooseImage.Text = "انتخاب عکس";
-            this.btnChooseImage.UseVisualStyleBackColor = true;
-            this.btnChooseImage.Click += new System.EventHandler(this.BtnChooseImage_Click);
-            // 
-            // btnChooseSignature
-            // 
-            this.btnChooseSignature.Location = new System.Drawing.Point(16, 78);
-            this.btnChooseSignature.Name = "btnChooseSignature";
-            this.btnChooseSignature.Size = new System.Drawing.Size(134, 26);
-            this.btnChooseSignature.TabIndex = 13;
-            this.btnChooseSignature.Text = "انتخاب عکس";
-            this.btnChooseSignature.UseVisualStyleBackColor = true;
-            this.btnChooseSignature.Click += new System.EventHandler(this.BtnChooseSignature_Click);
-            // 
-            // picImage
-            // 
-            this.picImage.Image = global::GAMA.Properties.Resources.Contact;
-            this.picImage.Location = new System.Drawing.Point(16, 110);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(134, 63);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImage.TabIndex = 3;
-            this.picImage.TabStop = false;
-            // 
-            // picSignature
-            // 
-            this.picSignature.Image = global::GAMA.Properties.Resources.Signature;
-            this.picSignature.Location = new System.Drawing.Point(16, 13);
-            this.picSignature.Name = "picSignature";
-            this.picSignature.Size = new System.Drawing.Size(134, 63);
-            this.picSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSignature.TabIndex = 3;
-            this.picSignature.TabStop = false;
-            // 
             // txtFather
             // 
-            this.txtFather.Location = new System.Drawing.Point(305, 253);
+            this.txtFather.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtFather.Location = new System.Drawing.Point(509, 319);
+            this.txtFather.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFather.MaxLength = 50;
             this.txtFather.Name = "txtFather";
-            this.txtFather.Size = new System.Drawing.Size(134, 24);
+            this.txtFather.Size = new System.Drawing.Size(177, 35);
             this.txtFather.TabIndex = 8;
             this.txtFather.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(536, 256);
+            this.label9.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label9.Location = new System.Drawing.Point(817, 323);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 18);
+            this.label9.Size = new System.Drawing.Size(59, 28);
             this.label9.TabIndex = 0;
             this.label9.Text = "نام پدر :";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(17, 298);
+            this.txtEmail.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtEmail.Location = new System.Drawing.Point(31, 445);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(134, 24);
+            this.txtEmail.Size = new System.Drawing.Size(177, 35);
             this.txtEmail.TabIndex = 18;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBirthDate
             // 
-            this.txtBirthDate.Location = new System.Drawing.Point(305, 223);
+            this.txtBirthDate.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtBirthDate.Location = new System.Drawing.Point(509, 282);
+            this.txtBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBirthDate.MaxLength = 10;
             this.txtBirthDate.Name = "txtBirthDate";
-            this.txtBirthDate.Size = new System.Drawing.Size(106, 24);
+            this.txtBirthDate.Size = new System.Drawing.Size(140, 35);
             this.txtBirthDate.TabIndex = 7;
             this.txtBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(242, 298);
+            this.label17.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label17.Location = new System.Drawing.Point(331, 445);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(42, 18);
+            this.label17.Size = new System.Drawing.Size(52, 28);
             this.label17.TabIndex = 0;
             this.label17.Text = "ایمیل :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(520, 226);
+            this.label8.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label8.Location = new System.Drawing.Point(795, 286);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 18);
+            this.label8.Size = new System.Drawing.Size(77, 28);
             this.label8.TabIndex = 0;
             this.label8.Text = "تاریخ تولد :";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(17, 328);
+            this.txtAddress.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtAddress.Location = new System.Drawing.Point(31, 482);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAddress.MaxLength = 200;
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(134, 67);
+            this.txtAddress.Size = new System.Drawing.Size(177, 82);
             this.txtAddress.TabIndex = 19;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtIssuePlace
             // 
-            this.txtIssuePlace.Location = new System.Drawing.Point(305, 193);
+            this.txtIssuePlace.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtIssuePlace.Location = new System.Drawing.Point(509, 246);
+            this.txtIssuePlace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIssuePlace.MaxLength = 50;
             this.txtIssuePlace.Name = "txtIssuePlace";
-            this.txtIssuePlace.Size = new System.Drawing.Size(134, 24);
+            this.txtIssuePlace.Size = new System.Drawing.Size(177, 35);
             this.txtIssuePlace.TabIndex = 6;
             this.txtIssuePlace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(240, 328);
+            this.label16.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label16.Location = new System.Drawing.Point(328, 482);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 18);
+            this.label16.Size = new System.Drawing.Size(54, 28);
             this.label16.TabIndex = 0;
             this.label16.Text = "آدرس :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(462, 196);
+            this.label7.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label7.Location = new System.Drawing.Point(718, 249);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 18);
+            this.label7.Size = new System.Drawing.Size(143, 28);
             this.label7.TabIndex = 0;
             this.label7.Text = "محل صدور شناسنامه :";
             // 
             // txtStudentJob
             // 
-            this.txtStudentJob.Location = new System.Drawing.Point(16, 268);
+            this.txtStudentJob.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtStudentJob.Location = new System.Drawing.Point(29, 408);
+            this.txtStudentJob.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStudentJob.Name = "txtStudentJob";
-            this.txtStudentJob.Size = new System.Drawing.Size(134, 24);
+            this.txtStudentJob.Size = new System.Drawing.Size(177, 35);
             this.txtStudentJob.TabIndex = 17;
             this.txtStudentJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(244, 268);
+            this.label15.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label15.Location = new System.Drawing.Point(333, 408);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(39, 18);
+            this.label15.Size = new System.Drawing.Size(48, 28);
             this.label15.TabIndex = 0;
             this.label15.Text = "شغل :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(546, 166);
+            this.label6.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label6.Location = new System.Drawing.Point(830, 212);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 18);
+            this.label6.Size = new System.Drawing.Size(46, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "تاهل :";
             // 
             // txtTelegramID
             // 
-            this.txtTelegramID.Location = new System.Drawing.Point(16, 238);
+            this.txtTelegramID.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtTelegramID.Location = new System.Drawing.Point(29, 371);
+            this.txtTelegramID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelegramID.MaxLength = 50;
             this.txtTelegramID.Name = "txtTelegramID";
-            this.txtTelegramID.Size = new System.Drawing.Size(134, 24);
+            this.txtTelegramID.Size = new System.Drawing.Size(177, 35);
             this.txtTelegramID.TabIndex = 16;
             this.txtTelegramID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(201, 238);
+            this.label14.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label14.Location = new System.Drawing.Point(276, 371);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 18);
+            this.label14.Size = new System.Drawing.Size(100, 28);
             this.label14.TabIndex = 0;
             this.label14.Text = "آی دی تلگرام :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(533, 136);
+            this.label5.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label5.Location = new System.Drawing.Point(813, 175);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 18);
+            this.label5.Size = new System.Drawing.Size(67, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "جنسیت :";
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(16, 208);
+            this.txtMobile.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtMobile.Location = new System.Drawing.Point(29, 334);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMobile.MaxLength = 50;
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(134, 24);
+            this.txtMobile.Size = new System.Drawing.Size(177, 35);
             this.txtMobile.TabIndex = 15;
             this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(241, 80);
+            this.label19.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label19.Location = new System.Drawing.Point(320, 40);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 18);
+            this.label19.Size = new System.Drawing.Size(44, 28);
             this.label19.TabIndex = 0;
             this.label19.Text = "امضا :";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(242, 177);
+            this.label18.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label18.Location = new System.Drawing.Point(323, 218);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 18);
+            this.label18.Size = new System.Drawing.Size(53, 28);
             this.label18.TabIndex = 0;
             this.label18.Text = "عکس :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(200, 208);
+            this.label13.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label13.Location = new System.Drawing.Point(275, 334);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 18);
+            this.label13.Size = new System.Drawing.Size(94, 28);
             this.label13.TabIndex = 0;
             this.label13.Text = "شماره موبایل :";
             // 
             // txtNCode
             // 
-            this.txtNCode.Location = new System.Drawing.Point(305, 103);
+            this.txtNCode.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtNCode.Location = new System.Drawing.Point(509, 135);
+            this.txtNCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNCode.MaxLength = 10;
             this.txtNCode.Name = "txtNCode";
-            this.txtNCode.Size = new System.Drawing.Size(134, 24);
+            this.txtNCode.Size = new System.Drawing.Size(177, 35);
             this.txtNCode.TabIndex = 3;
             this.txtNCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTell
             // 
-            this.txtTell.Location = new System.Drawing.Point(305, 341);
+            this.txtTell.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtTell.Location = new System.Drawing.Point(509, 428);
+            this.txtTell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTell.MaxLength = 50;
             this.txtTell.Name = "txtTell";
-            this.txtTell.Size = new System.Drawing.Size(134, 24);
+            this.txtTell.Size = new System.Drawing.Size(177, 35);
             this.txtTell.TabIndex = 11;
             this.txtTell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(488, 106);
+            this.label4.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label4.Location = new System.Drawing.Point(753, 138);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 18);
+            this.label4.Size = new System.Drawing.Size(113, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "شماره شناسنامه :";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(522, 341);
+            this.label12.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label12.Location = new System.Drawing.Point(798, 428);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 18);
+            this.label12.Size = new System.Drawing.Size(80, 28);
             this.label12.TabIndex = 0;
             this.label12.Text = "تلفن منزل :";
             // 
             // txtNationalCode
             // 
-            this.txtNationalCode.Location = new System.Drawing.Point(305, 73);
+            this.txtNationalCode.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtNationalCode.Location = new System.Drawing.Point(509, 98);
+            this.txtNationalCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNationalCode.MaxLength = 10;
             this.txtNationalCode.Name = "txtNationalCode";
-            this.txtNationalCode.Size = new System.Drawing.Size(134, 24);
+            this.txtNationalCode.Size = new System.Drawing.Size(177, 35);
             this.txtNationalCode.TabIndex = 2;
             this.txtNationalCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(536, 76);
+            this.label3.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label3.Location = new System.Drawing.Point(817, 102);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 18);
+            this.label3.Size = new System.Drawing.Size(63, 28);
             this.label3.TabIndex = 0;
             this.label3.Text = "کد ملی :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(520, 316);
+            this.label11.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label11.Location = new System.Drawing.Point(795, 397);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 18);
+            this.label11.Size = new System.Drawing.Size(75, 28);
             this.label11.TabIndex = 0;
             this.label11.Text = "تحصیلات :";
             // 
             // txtLName
             // 
-            this.txtLName.Location = new System.Drawing.Point(305, 43);
+            this.txtLName.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtLName.Location = new System.Drawing.Point(509, 61);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLName.MaxLength = 50;
             this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(134, 24);
+            this.txtLName.Size = new System.Drawing.Size(177, 35);
             this.txtLName.TabIndex = 1;
             this.txtLName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtEducation
             // 
-            this.txtEducation.Location = new System.Drawing.Point(305, 313);
+            this.txtEducation.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtEducation.Location = new System.Drawing.Point(509, 393);
+            this.txtEducation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEducation.MaxLength = 50;
             this.txtEducation.Name = "txtEducation";
-            this.txtEducation.Size = new System.Drawing.Size(134, 24);
+            this.txtEducation.Size = new System.Drawing.Size(177, 35);
             this.txtEducation.TabIndex = 10;
             this.txtEducation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMother
             // 
-            this.txtMother.Location = new System.Drawing.Point(305, 283);
+            this.txtMother.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtMother.Location = new System.Drawing.Point(509, 356);
+            this.txtMother.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMother.MaxLength = 50;
             this.txtMother.Name = "txtMother";
-            this.txtMother.Size = new System.Drawing.Size(134, 24);
+            this.txtMother.Size = new System.Drawing.Size(177, 35);
             this.txtMother.TabIndex = 9;
             this.txtMother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(506, 46);
+            this.label2.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label2.Location = new System.Drawing.Point(777, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 18);
+            this.label2.Size = new System.Drawing.Size(93, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "نام خانوادگی :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(531, 283);
+            this.label10.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label10.Location = new System.Drawing.Point(810, 356);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 18);
+            this.label10.Size = new System.Drawing.Size(63, 28);
             this.label10.TabIndex = 0;
             this.label10.Text = "نام مادر :";
             // 
             // txtFName
             // 
-            this.txtFName.Location = new System.Drawing.Point(305, 13);
+            this.txtFName.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.txtFName.Location = new System.Drawing.Point(509, 24);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFName.MaxLength = 50;
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(134, 24);
+            this.txtFName.Size = new System.Drawing.Size(177, 35);
             this.txtFName.TabIndex = 0;
             this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(556, 16);
+            this.label1.Font = new System.Drawing.Font("B Nazanin", 11F);
+            this.label1.Location = new System.Drawing.Point(843, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 18);
+            this.label1.Size = new System.Drawing.Size(35, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "نام :";
             // 
@@ -614,28 +632,77 @@ namespace GAMA
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAdd.Font = new System.Drawing.Font("B Nazanin", 11F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.IsClicked = false;
-            this.btnAdd.Location = new System.Drawing.Point(288, 445);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(444, 636);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.PareName = null;
             this.btnAdd.RowIndex = 0;
-            this.btnAdd.Size = new System.Drawing.Size(71, 30);
+            this.btnAdd.Size = new System.Drawing.Size(95, 37);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ثبت";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
+            // btnTasvir
+            // 
+            this.btnTasvir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btnTasvir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTasvir.ColumnIndex = 3;
+            this.btnTasvir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTasvir.FlatAppearance.BorderSize = 0;
+            this.btnTasvir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTasvir.Font = new System.Drawing.Font("B Nazanin", 13F);
+            this.btnTasvir.ForeColor = System.Drawing.Color.White;
+            this.btnTasvir.ImageIndex = 0;
+            this.btnTasvir.ImageList = this.imageList1;
+            this.btnTasvir.IsClicked = false;
+            this.btnTasvir.Location = new System.Drawing.Point(21, 12);
+            this.btnTasvir.Name = "btnTasvir";
+            this.btnTasvir.PareName = null;
+            this.btnTasvir.RowIndex = 1;
+            this.btnTasvir.Size = new System.Drawing.Size(150, 150);
+            this.btnTasvir.TabIndex = 127;
+            this.btnTasvir.UseVisualStyleBackColor = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "add.png");
+            // 
+            // btnSimple1
+            // 
+            this.btnSimple1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btnSimple1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSimple1.ColumnIndex = 3;
+            this.btnSimple1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSimple1.FlatAppearance.BorderSize = 0;
+            this.btnSimple1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSimple1.Font = new System.Drawing.Font("B Nazanin", 13F);
+            this.btnSimple1.ForeColor = System.Drawing.Color.White;
+            this.btnSimple1.ImageIndex = 0;
+            this.btnSimple1.ImageList = this.imageList1;
+            this.btnSimple1.IsClicked = false;
+            this.btnSimple1.Location = new System.Drawing.Point(21, 168);
+            this.btnSimple1.Name = "btnSimple1";
+            this.btnSimple1.PareName = null;
+            this.btnSimple1.RowIndex = 1;
+            this.btnSimple1.Size = new System.Drawing.Size(150, 150);
+            this.btnSimple1.TabIndex = 128;
+            this.btnSimple1.UseVisualStyleBackColor = false;
+            // 
             // FrmAddEditStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 486);
+            this.ClientSize = new System.Drawing.Size(945, 693);
             this.Controls.Add(this.pnlAutoDesign1);
             this.Controls.Add(this.btnAdd);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FrmAddEditStudent";
             this.Text = "frmAddEditStudent";
             this.Controls.SetChildIndex(this.btnAdd, 0);
@@ -647,8 +714,6 @@ namespace GAMA
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSignature)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -687,10 +752,6 @@ namespace GAMA
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMother;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnChooseImage;
-        private System.Windows.Forms.Button btnChooseSignature;
-        private System.Windows.Forms.PictureBox picImage;
-        private System.Windows.Forms.PictureBox picSignature;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtPostalCode;
@@ -703,5 +764,8 @@ namespace GAMA
         private System.Windows.Forms.RadioButton rdbMarriedNo;
         private System.Windows.Forms.TextBox txtEducation;
         private System.Windows.Forms.PictureBox picBirthDate;
+        private BtnSimple btnTasvir;
+        private System.Windows.Forms.ImageList imageList1;
+        private BtnSimple btnSimple1;
     }
 }
