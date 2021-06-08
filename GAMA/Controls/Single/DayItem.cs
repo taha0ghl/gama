@@ -13,6 +13,11 @@ namespace GAMA
 {
     public partial class DayItem : UserControl
     {
+        public DayItem()
+        {
+            InitializeComponent();
+        }
+
         #region Fields
 
         private Color _selectedRingColor = Color.FromArgb(156, 39, 160);
@@ -34,8 +39,6 @@ namespace GAMA
             get => _isSelected;
             set
             {
-                if (IsCurrant && value)
-                    throw new Exception("control can't be current and selected in the same time");
                 _isSelected = value;
                 PaintItem();
                 if (value)
@@ -49,8 +52,6 @@ namespace GAMA
             get => _isCurrant;
             set
             {
-                if (IsSelected && value)
-                    throw new Exception("control can't be current and selected in the same time");
                 _isCurrant = value;
                 PaintItem();
                 if (value)
@@ -140,10 +141,6 @@ namespace GAMA
 
 
         #region Methods
-        public DayItem()
-        {
-            InitializeComponent();
-        }
 
         protected void PaintItem()
         {
@@ -166,7 +163,7 @@ namespace GAMA
 
         protected void EraseItem(Graphics gr)
         {
-                gr.Clear(BackColor);
+            gr.Clear(BackColor);
         }
 
         protected void MarkAsSelected(Graphics gr)
@@ -210,7 +207,7 @@ namespace GAMA
                 height = ClientSize.Height;
                 x = y = 0;
             }
-            return new RectangleF(x, y, width , height);
+            return new RectangleF(x, y, width, height);
         }
 
         #endregion
@@ -224,8 +221,7 @@ namespace GAMA
 
         private void YearItem_Click(object sender, EventArgs e)
         {
-            if (!IsCurrant)
-                IsSelected = !IsSelected;
+            IsSelected = !IsSelected;
         }
         #endregion
 

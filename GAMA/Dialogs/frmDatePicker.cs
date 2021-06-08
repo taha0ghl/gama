@@ -23,6 +23,7 @@ namespace GAMA
             Day = day;
             LstMonth.List = monthNames;
             LstMonth.SelectedItemIndex = Month - 1;
+            NumYear.Value = Year;
             SetDaysToCalendar();
         }
 

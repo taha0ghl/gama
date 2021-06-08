@@ -37,12 +37,12 @@
             System.Windows.Forms.Label label1;
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.NumYear = new System.Windows.Forms.NumericUpDown();
+            this.LstMonth = new GAMA.HorizontalListNavigator();
             this.flpButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDays = new System.Windows.Forms.TableLayoutPanel();
-            this.LstMonth = new GAMA.HorizontalListNavigator();
             label7 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
@@ -194,6 +194,27 @@
             0});
             this.NumYear.LostFocus += new System.EventHandler(this.Num_LostFocus);
             // 
+            // LstMonth
+            // 
+            this.LstMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.LstMonth.ButtonFont = new System.Drawing.Font("Tahoma", 9F);
+            this.LstMonth.ButtonImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LstMonth.ButtonsWidth = 35;
+            this.LstMonth.ForeColor = System.Drawing.Color.White;
+            this.LstMonth.LeftButtonImage = null;
+            this.LstMonth.LeftButtonText = "<";
+            this.LstMonth.List = null;
+            this.LstMonth.Location = new System.Drawing.Point(100, 48);
+            this.LstMonth.Margin = new System.Windows.Forms.Padding(3, 48, 3, 48);
+            this.LstMonth.Name = "LstMonth";
+            this.LstMonth.RightButotnText = " >";
+            this.LstMonth.RightButtonImage = null;
+            this.LstMonth.SelectedItemIndex = 0;
+            this.LstMonth.Size = new System.Drawing.Size(169, 30);
+            this.LstMonth.TabIndex = 0;
+            this.LstMonth.TextFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LstMonth.SelectedItemChanged += new System.EventHandler(this.LstMonth_SelectedItemChanged);
+            // 
             // flpButtons
             // 
             this.flpButtons.Controls.Add(this.btnOk);
@@ -292,28 +313,7 @@
             this.tlpDays.Size = new System.Drawing.Size(288, 215);
             this.tlpDays.TabIndex = 5;
             // 
-            // LstMonth
-            // 
-            this.LstMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.LstMonth.ButtonFont = new System.Drawing.Font("Tahoma", 9F);
-            this.LstMonth.ButtonImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LstMonth.ButtonsWidth = 30;
-            this.LstMonth.ForeColor = System.Drawing.Color.White;
-            this.LstMonth.LeftButtonImage = null;
-            this.LstMonth.LeftButtonText = "<";
-            this.LstMonth.List = null;
-            this.LstMonth.Location = new System.Drawing.Point(110, 48);
-            this.LstMonth.Margin = new System.Windows.Forms.Padding(3, 48, 3, 48);
-            this.LstMonth.Name = "LstMonth";
-            this.LstMonth.RightButotnText = " >";
-            this.LstMonth.RightButtonImage = null;
-            this.LstMonth.SelectedItemIndex = 0;
-            this.LstMonth.Size = new System.Drawing.Size(159, 30);
-            this.LstMonth.TabIndex = 0;
-            this.LstMonth.TextFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LstMonth.SelectedItemChanged += new System.EventHandler(this.LstMonth_SelectedItemChanged);
-            // 
-            // frmDatePicker
+            // FrmDatePicker
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -327,7 +327,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmDatePicker";
+            this.Name = "FrmDatePicker";
             this.Text = "Form1";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NumYear)).EndInit();
