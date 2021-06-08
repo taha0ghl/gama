@@ -8,14 +8,31 @@ namespace MyClass
 {
     public enum PersianDayOfWeek
     {
-        Shanbe = 1,
-        Yekshanbe = 2,
-        Doshanbe = 3,
-        Seshanbe = 4,
-        Charshanbe = 5,
-        Panjshanbe = 6,
-        Jome = 7
+        شنبه = 1,
+        یک_شنبه = 2,
+        دو_شنبه = 3,
+        سه_شنبه = 4,
+        چهار_شنبه = 5,
+        پنج_شنبه = 6,
+        جمعه = 7
     }
+
+    public enum PersianMonthNames
+    {
+        فروردین,
+        اردیبهشت,
+        خرداد,
+        تیر,
+        مرداد,
+        شهریور,
+        مهر,
+        آبان,
+        آذر,
+        دی,
+        بهمن,
+        اسفند
+    }
+
     public static class DateTimeManager
     {
         private static readonly PersianCalendar calendar = new PersianCalendar();
@@ -58,19 +75,19 @@ namespace MyClass
             switch (date)
             {
                 case DayOfWeek.Saturday:
-                    return PersianDayOfWeek.Shanbe;
+                    return PersianDayOfWeek.شنبه;
                 case DayOfWeek.Sunday:
-                    return PersianDayOfWeek.Yekshanbe;
+                    return PersianDayOfWeek.یک_شنبه;
                 case DayOfWeek.Monday:
-                    return PersianDayOfWeek.Doshanbe;
+                    return PersianDayOfWeek.دو_شنبه;
                 case DayOfWeek.Tuesday:
-                    return PersianDayOfWeek.Seshanbe;
+                    return PersianDayOfWeek.سه_شنبه;
                 case DayOfWeek.Wednesday:
-                    return PersianDayOfWeek.Charshanbe;
+                    return PersianDayOfWeek.چهار_شنبه;
                 case DayOfWeek.Thursday:
-                    return PersianDayOfWeek.Panjshanbe;
+                    return PersianDayOfWeek.پنج_شنبه;
                 case DayOfWeek.Friday:
-                    return PersianDayOfWeek.Jome;
+                    return PersianDayOfWeek.جمعه;
                 default:
                     throw new Exception();
             }
