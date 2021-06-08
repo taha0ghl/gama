@@ -114,3 +114,4 @@ F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csproj.CoreCompileInputs.cache
 F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.csproj.CopyComplete
 F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.exe
 F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.pdb
+F:\project\GAMA\gama\GAMA\obj\Debug\GAMA.FrmAddEditStudent.resources

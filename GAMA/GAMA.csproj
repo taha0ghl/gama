@@ -286,6 +286,9 @@
     <EmbeddedResource Include="ثبت نام\frmAddEditSabtNam.resx">
       <DependentUpon>frmAddEditSabtNam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="کارآموز\frmAddEditStudent.resx">
+      <DependentUpon>frmAddEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="کارآموز\frmStudent.resx">
       <DependentUpon>frmStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +306,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="کتاب استاندارد\frmAddEditCourse.resx">
       <DependentUpon>frmAddEditCourse.cs</DependentUpon>
@@ -339,6 +343,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatePicker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signature.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
