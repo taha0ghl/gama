@@ -86,13 +86,15 @@ namespace GAMA
 
             CaptureRow();
 
-            string name, time, date;
+            //string name, time, date;
 
-            name = string.Empty;
-            time = SqlServerClass.Select(TableNames.BranchCourse, "InsertTime", string.Format("branchName = N'{0}'", selected_row.Cells["نام خوشه"].Value));
-            date = SqlServerClass.Select(TableNames.BranchCourse, "InsertDate", string.Format("branchName = N'{0}'", selected_row.Cells["نام خوشه"].Value));
+            //name = string.Empty;
+            //time = SqlServerClass.Select(TableNames.BranchCourse, "InsertTime", string.Format("branchName = N'{0}'", selected_row.Cells["نام خوشه"].Value));
+            //date = SqlServerClass.Select(TableNames.BranchCourse, "InsertDate", string.Format("branchName = N'{0}'", selected_row.Cells["نام خوشه"].Value));
 
-            (new frmDetails(name, date, time)).ShowDialog();
+            string id = SqlServerClass.Select(TableNames.BranchCourse, "Id", string.Format("branchName = N'{0}'", Convert.ToString(dataGridView1.SelectedRows[0].Cells["نام خوشه"].Value)));
+
+            (new FrmDetails(TableNames.BranchCourse, id)).ShowDialog();
         }
         private void BtnAddGroup_Click(object sender, EventArgs e)
         {

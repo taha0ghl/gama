@@ -1,7 +1,7 @@
 ﻿
 namespace GAMA
 {
-    partial class frmDetails
+    partial class FrmDetails
     {
         /// <summary>
         /// Required designer variable.

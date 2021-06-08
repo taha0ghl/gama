@@ -10,9 +10,9 @@ using MyClass;
 
 namespace GAMA
 {
-    public partial class frmDetails : FrmMaster
+    public partial class FrmDetails : FrmMaster
     {
-        public frmDetails(string tableName, string idValue)
+        public FrmDetails(string tableName, string idValue)
         {
             InitializeComponent();
 

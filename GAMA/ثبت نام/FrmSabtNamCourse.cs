@@ -56,19 +56,16 @@ namespace GAMA
 
             CaptureRow();
 
-            string name, time, date;
+            string id = "1";
 
-            name = string.Empty;
-            time = SqlServerClass.Select(TableNames.GroupCourse, "InsertTime", string.Format("groupName = N'{0}'", selected_row.Cells["نام گروه"].Value));
-            date = SqlServerClass.Select(TableNames.GroupCourse, "InsertDate", string.Format("groupName = N'{0}'", selected_row.Cells["نام گروه"].Value));
-
-            (new frmDetails(name, date, time)).ShowDialog();
+            (new FrmDetails(TableNames.SabtnamCourse,id)).ShowDialog();
         }
         private void FrmSabtNamCourse_Load(object sender, EventArgs e)
         {
             LoadAllData();
             SetLocations();
             Theme.Set(this);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void FrmSabtNamCourse_Paint(object sender, PaintEventArgs e)
         {
@@ -107,12 +104,12 @@ namespace GAMA
             Locations.CenterHeight(this, dataGridView1);
             dataGridView1.Top += 15;
             //Locations.Up(dataGridView1, 30, true, panel1);
-            Locations.Down(dataGridView1, 25, false, btnAdd, btnDelete, btnDetails, btnEdit);
+            Locations.Down(dataGridView1, 25, false, btnAdd, btnDetails, btnEdit);
 
             // X
             Locations.CenterWidth(this, dataGridView1, btnAdd);
             Locations.Right(btnAdd, 3, true, btnEdit);
-            Locations.Left(btnAdd, 3, true, btnDelete, btnDetails);
+            Locations.Left(btnAdd, 3, true, btnDetails);
         }
 
         #endregion

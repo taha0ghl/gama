@@ -81,13 +81,15 @@ namespace GAMA
 
             string name, time, date;
 
-            // test!!!!!!!!!!!
-            name = string.Empty;
+            //// test!!!!!!!!!!!
+            //name = string.Empty;
 
-            time = SqlServerClass.Select(TableNames.Course, "InsertTime", string.Format("courseName = N'{0}'", selected_row.Cells[fieldCondition].Value));
-            date = SqlServerClass.Select(TableNames.Course, "InsertDate", string.Format("courseName = N'{0}'", selected_row.Cells[fieldCondition].Value));
+            //time = SqlServerClass.Select(TableNames.Course, "InsertTime", string.Format("courseName = N'{0}'", selected_row.Cells[fieldCondition].Value));
+            //date = SqlServerClass.Select(TableNames.Course, "InsertDate", string.Format("courseName = N'{0}'", selected_row.Cells[fieldCondition].Value));
 
-            (new frmDetails(name, date, time)).ShowDialog();
+            string id = SqlServerClass.Select(TableNames.Course, "Id", string.Format("courseName = N'{0}'", Convert.ToString(dataGridView1.SelectedRows[0].Cells[fieldCondition].Value)));
+
+            (new FrmDetails(TableNames.Course, id)).ShowDialog();
         }
         private void FrmStandard_Load(object sender, EventArgs e)
         {
