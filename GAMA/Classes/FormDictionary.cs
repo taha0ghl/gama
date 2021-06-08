@@ -18,8 +18,8 @@ namespace MyClass
             { "frmmostanadat", new  FrmMostanadat() },
             { "frmstudent", new FrmStudent() },
             { "frmaddeditstudent", new FrmAddEditStudent(Moods.Add) },
-            { "frmaddeditsabtnam", new FrmAddEditSabtNam(Moods.Add)},
-            { "frmsabtnam", new FrmSabtNam() }
+            { "frmaddeditsabtnam", new FrmAddEditSabtNamCourse(Moods.Add)},
+            { "frmsabtnam", new FrmSabtNamCourse() }
         };
 
         public static Form Get(string frmName)

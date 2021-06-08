@@ -16,7 +16,7 @@ namespace GAMA
             double result = ((double)minValue) + distinct * percent;
             target.Invoke((MethodInvoker)delegate
             {
-                property.SetValue(target, result);
+                //property.SetValue(target, result);
             });
         }
     }

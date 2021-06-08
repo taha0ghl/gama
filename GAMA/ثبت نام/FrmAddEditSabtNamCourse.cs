@@ -11,9 +11,9 @@ using System.Collections;
 
 namespace GAMA
 {
-    public partial class FrmAddEditSabtNam : FrmMaster
+    public partial class FrmAddEditSabtNamCourse : FrmMaster
     {
-        public FrmAddEditSabtNam(Moods m)
+        public FrmAddEditSabtNamCourse(Moods m)
         {
             InitializeComponent();
             mood = m;

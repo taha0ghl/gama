@@ -12,20 +12,19 @@ namespace GAMA
 {
     public partial class frmDetails : FrmMaster
     {
-        public frmDetails(string name, string date, string time)
+        public frmDetails(string tableName, string idValue)
         {
             InitializeComponent();
-            insertName = name;
-            insertDate = date;
-            insertTime = time;
+
+            table = tableName;
+            id = idValue;
         }
 
         //Variables****************************
         #region
 
-        private readonly string insertName;
-        private readonly string insertDate;
-        private readonly string insertTime;
+        private readonly string id;
+        private readonly string table;
 
         #endregion
         //*************************************
@@ -48,9 +47,15 @@ namespace GAMA
 
         private void LoadData()
         {
-            txtName.Text = insertName;
-            txtDate.Text = insertDate;
-            txtTime.Text = insertTime;
+            string condition = string.Format("id = {0}", id);
+
+            string name = SqlServerClass.Select(table, "userId", condition); ;
+            string time = SqlServerClass.Select(table, "InsertTime", condition);
+            string date = SqlServerClass.Select(table, "InsertDate", condition);
+
+            txtName.Text = name;
+            txtDate.Text = date;
+            txtTime.Text = time;
         }
         private void SetLocations()
         {

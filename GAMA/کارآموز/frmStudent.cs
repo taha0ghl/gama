@@ -22,7 +22,7 @@ namespace GAMA
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            (new FrmAddEditSabtNam(Moods.Add)).Show();
+            (new FrmAddEditSabtNamCourse(Moods.Add)).Show();
         }
         private void FrmStudent_Load(object sender, EventArgs e)
         {

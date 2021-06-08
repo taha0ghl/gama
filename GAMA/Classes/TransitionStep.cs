@@ -36,7 +36,7 @@ namespace GAMA
             PropertyInfo info = target.GetType().GetProperty(property);
             CheckValidation(info, value);
             this._property = info;
-            this.minValue = info.GetValue(target);
+            //this.minValue = info.GetValue(target);
             this.max_value = value;
             this.delay = delay;
             this.target = target;

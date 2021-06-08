@@ -66,7 +66,6 @@ C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.ReportViewer.W
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.csproj.AssemblyReference.cache
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmMaster.resources
-C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditSabtNam.resources
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmStudent.resources
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditBranch.resources
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmMain.resources
@@ -119,3 +118,5 @@ C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.DayItem.resources
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.HorizontalListNavigator.resources
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmDatePicker.resources
 C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditStudent.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmAddEditSabtNamCourse.resources
+C:\Users\P.Andishe\Desktop\Git Gama\GAMA\GAMA\obj\Debug\GAMA.FrmSabtNamCourse.resources
