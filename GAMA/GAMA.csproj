@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Classes\AutoDesigner.cs" />
     <Compile Include="Classes\ControlEdgeRounder.cs" />
+    <Compile Include="Classes\MovableForm.cs" />
     <Compile Include="Controls\Base\BaseBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -91,7 +92,25 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\FormFaider.cs" />
+    <Compile Include="Controls\Single\DayItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Single\DayItem.designer.cs">
+      <DependentUpon>DayItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Single\frmAlter.cs" />
+    <Compile Include="Controls\Single\HorizontalListNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Single\HorizontalListNavigator.designer.cs">
+      <DependentUpon>HorizontalListNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmDatePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmDatePicker.designer.cs">
+      <DependentUpon>frmDatePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\ITransitionStep.cs" />
     <Compile Include="Interfaces\ITransitionStrategy.cs" />
     <Compile Include="Classes\RadiusCollection.cs" />
@@ -254,6 +273,15 @@
     <Compile Include="Classes\TableNames.cs" />
     <EmbeddedResource Include="Controls\Base\frmMaster.resx">
       <DependentUpon>frmMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Single\DayItem.resx">
+      <DependentUpon>DayItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Single\HorizontalListNavigator.resx">
+      <DependentUpon>HorizontalListNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmDatePicker.resx">
+      <DependentUpon>frmDatePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ثبت نام\frmAddEditSabtNam.resx">
       <DependentUpon>frmAddEditSabtNam.cs</DependentUpon>

@@ -6,6 +6,16 @@ using System.Globalization;
 
 namespace MyClass
 {
+    public enum PersianDayOfWeek
+    {
+        Shanbe = 1,
+        Yekshanbe = 2,
+        Doshanbe = 3,
+        Seshanbe = 4,
+        Charshanbe = 5,
+        Panjshanbe = 6,
+        Jome = 7
+    }
     public static class DateTimeManager
     {
         private static readonly PersianCalendar calendar = new PersianCalendar();
@@ -42,6 +52,28 @@ namespace MyClass
             output = string.Format("{0}:{1}:{2}", hour, minute, seconde);
 
             return output;
+        }
+        public static PersianDayOfWeek PersionDayOfWeek(this DayOfWeek date)
+        {
+            switch (date)
+            {
+                case DayOfWeek.Saturday:
+                    return PersianDayOfWeek.Shanbe;
+                case DayOfWeek.Sunday:
+                    return PersianDayOfWeek.Yekshanbe;
+                case DayOfWeek.Monday:
+                    return PersianDayOfWeek.Doshanbe;
+                case DayOfWeek.Tuesday:
+                    return PersianDayOfWeek.Seshanbe;
+                case DayOfWeek.Wednesday:
+                    return PersianDayOfWeek.Charshanbe;
+                case DayOfWeek.Thursday:
+                    return PersianDayOfWeek.Panjshanbe;
+                case DayOfWeek.Friday:
+                    return PersianDayOfWeek.Jome;
+                default:
+                    throw new Exception();
+            }
         }
     }
 }
