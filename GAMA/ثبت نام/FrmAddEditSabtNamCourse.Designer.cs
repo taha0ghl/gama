@@ -1,7 +1,7 @@
 ﻿
 namespace GAMA
 {
-    partial class FrmAddEditSabtNam
+    partial class FrmAddEditSabtNamCourse
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace GAMA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddEditSabtNam));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddEditSabtNamCourse));
             this.btnAdd = new GAMA.BtnSimple();
             this.txtLoggedUser = new GAMA.TxtSimple();
             this.mainlbl26 = new GAMA.LblSimple();

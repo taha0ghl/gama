@@ -16,7 +16,7 @@ namespace GAMA
             Color result = Blend((Color)value, (Color)minValue, percent);
             target.Invoke((MethodInvoker)delegate
             {
-                property.SetValue(target, result);
+                property.SetValue(target, result, null);
             });
         }
 

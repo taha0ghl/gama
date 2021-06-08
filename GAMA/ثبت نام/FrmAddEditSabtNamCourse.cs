@@ -11,9 +11,9 @@ using System.Collections;
 
 namespace GAMA
 {
-    public partial class FrmAddEditSabtNam : FrmMaster
+    public partial class FrmAddEditSabtNamCourse : FrmMaster
     {
-        public FrmAddEditSabtNam(Moods m)
+        public FrmAddEditSabtNamCourse(Moods m)
         {
             InitializeComponent();
             mood = m;
@@ -33,12 +33,16 @@ namespace GAMA
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            if (ControlManager.CheckEmptyControls(panel1))
+            {
+                return;
+            }
+
             string idDore = SqlCaptureManager.GetField(TableNames.Course, "id", string.Format("courseName = N'{0}'", mainCombo1.SelectedItem));
 
             string date = StaticData.current_date;
             string time = DateTimeManager.GetTime(DateTime.Now).Substring(0, 5);
             string userId = StaticData.current_user.Id;
-
             bool insert1, insert2;
 
             string[] fields1 = {
@@ -69,22 +73,6 @@ namespace GAMA
                 time,
                 userId
             };
-
-            insert1 = SqlServerClass.InsertWithFields(
-                TableNames.SabtnamCourse,
-                fields1[0], values1[0],
-                fields1[1], values1[1],
-                fields1[2], values1[2],
-                fields1[3], values1[3],
-                fields1[4], values1[4],
-                fields1[5], values1[5],
-                fields1[6], values1[6],
-                fields1[7], values1[7],
-                fields1[8], values1[8],
-                fields1[9], values1[9],
-                fields1[10], values1[10],
-                fields1[11], values1[11]
-                );
 
             if (!SqlServerClass.RowExists(TableNames.Student, string.Format("Id = {0}", txtCode.Text)))
             {
@@ -168,6 +156,33 @@ namespace GAMA
                 insert2 = true;
             }
 
+            switch (mood)
+            {
+                case Moods.Add:
+                    insert1 = SqlServerClass.InsertWithFields(
+                        TableNames.SabtnamCourse,
+                        fields1[0], values1[0],
+                        fields1[1], values1[1],
+                        fields1[2], values1[2],
+                        fields1[3], values1[3],
+                        fields1[4], values1[4],
+                        fields1[5], values1[5],
+                        fields1[6], values1[6],
+                        fields1[7], values1[7],
+                        fields1[8], values1[8],
+                        fields1[9], values1[9],
+                        fields1[10], values1[10],
+                        fields1[11], values1[11]
+                        );
+                    break;
+                case Moods.Edit:
+                    insert1 = SqlServerClass.Update(TableNames.SabtnamCourse, fields1, values1, string.Format("id = {0}", id));
+                    break;
+                default:
+                    insert1 = false;
+                    break;
+            }
+
             if (insert1 && insert2)
             {
                 MessageBox.Show("با موفقیت انجام شد");
@@ -188,7 +203,27 @@ namespace GAMA
         }
         private void FrmAddEditStudent_Load(object sender, EventArgs e)
         {
+            string headerText = string.Empty;
             txtLoggedUser.ReadOnly = txtId.ReadOnly = txtCode.ReadOnly = true;
+            ControlManager.SetComboItems(mainCombo1, SqlCaptureManager.AllCourse());
+
+            switch (mood)
+            {
+                case Moods.Add:
+                    headerText = "ثبت نام جدید";
+                    btnAdd.Text = "ثبت";
+                    FindId();
+                    break;
+                case Moods.Edit:
+                    headerText = "ویرایش اطلاعات ثبت نام";
+                    btnAdd.Text = "ویرایش";
+                    LoadData();
+                    break;
+                default:
+                    break;
+            }
+
+            Text = headerText;
             LoadDetails();
             SetLocations();
         }
@@ -230,18 +265,28 @@ namespace GAMA
 
         private void FindId()
         {
-            txtId.Text = Convert.ToString(SqlServerClass.RowCount(TableNames.Student, "Id") + 1);
+            txtId.Text = Convert.ToString(SqlServerClass.RowCount(TableNames.SabtnamCourse, "Id") + 1);
         }
         private void LoadData()
         {
+            DataGridViewRow row = FrmSabtNamCourse.selected_row;
 
+            txtName.Text = Convert.ToString(row.Cells["نام"].Value);
+            txtLName.Text = Convert.ToString(row.Cells["نام خانوادگی"].Value);
+            mainCombo1.SelectedItem = Convert.ToString(row.Cells["دوره"].Value);
+            txtNoeClass.Text = Convert.ToString(row.Cells["نوع کلاس"].Value);
+            txtSabtnamDate.Text = Convert.ToString(row.Cells["تاریخ ثبت نام"].Value);
+            txtShahrie.Text = Convert.ToString(row.Cells["شهریه"].Value);
+            txtNahveMoarefi.Text = Convert.ToString(row.Cells["نحوه معرفی"].Value);
+            txtVaghtAzad.Text = Convert.ToString(row.Cells["وقت آزاد"].Value);
+            txtSabtnamUser.Text = Convert.ToString(row.Cells["ثبت نام کننده"].Value);
+            txtDescription.Text = Convert.ToString(row.Cells["توضیحات"].Value);
         }
         private void LoadDetails()
         {
             lblTitle.Text = string.Format("فرم ثبت نام دوره - آموزشگاه {0}", SqlCaptureManager.DepartmentName());
             lblDate.Text = string.Format("تاریخ ثبت نام : {0}", StaticData.current_date);
             txtLoggedUser.Text = StaticData.current_user.FirstName + " " + StaticData.current_user.LastName;
-            ControlManager.SetComboItems(mainCombo1, SqlCaptureManager.AllCourse());
             string doc = SqlCaptureManager.RequirdDocumants();
 
             string[] subDocs = doc.Split(',');
